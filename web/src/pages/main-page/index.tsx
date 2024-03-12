@@ -1,11 +1,11 @@
+import clsx from "clsx"
 import { Icon } from "@/shared/ui/icon"
 import { Container } from "@/shared/ui/container"
 import { LanguageSelector } from "@/shared/ui/language-selector"
 import { Button } from "@/shared/ui/button"
-import clsx from "clsx"
+import { ProfileMenu } from "@/shared/ui/profile-menu"
 
 export const MainPage = () => {
-
   const percent = 50
 
   return (
@@ -22,9 +22,7 @@ export const MainPage = () => {
               <Button title={"View course"} />
               {/* <button className="h-[48px] px-[22px] bg-primary rounded-sm text-white">View course</button> */}
               <LanguageSelector />
-              <button className="p-3 rounded-sm">
-                <Icon type={"person"} />
-              </button>
+              <ProfileMenu />
             </div>
           </nav>
         </Container>

@@ -5,11 +5,8 @@ import { Listbox, Transition } from '@headlessui/react'
 import { Icon } from '../icon'
 
 export const LanguageSelector = () => {
-
     const onChangeLanguage = (lang: string) => i18next.changeLanguage(lang)
-
     const [selected, setSelected] = React.useState(languages[0])
-
     return (
         <Listbox value={selected} onChange={setSelected}>
             <div className="relative">

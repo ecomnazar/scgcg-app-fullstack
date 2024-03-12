@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "#9553FF",
+        secondary: "#64748B",
       },
       borderRadius: {
         sm: "6px",

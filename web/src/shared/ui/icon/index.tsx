@@ -1,25 +1,34 @@
 import React from 'react'
 
-interface Props {
-    type: 'arrow-down' | 'arrow-up' | 'arrow-right' | 'close' | 'edit-profile' | 'eye' | 'humans' | 'language' | 'location' | 'mail' | 'person' | 'signout' | 'tick'
+const icons = {
+    'arrow-down': 'arrow-down-icon.svg',
+    'arrow-up': 'arrow-up-icon.svg',
+    'arrow-right': 'arrow-right-icon.svg',
+    'close': 'arrow-right-icon.svg',
+    'edit-profile': 'edit-profile-icon.svg',
+    'eye': 'eye-icon.svg',
+    'humans': 'humans-icon.svg',
+    'language': 'language-icon.svg',
+    'location': 'location-icon.svg',
+    'mail': 'mail-icon.svg',
+    'person': 'person-icon.svg',
+    'signout': 'signout-icon.svg',
+    'tick': 'tick-icon.svg',
 }
 
-export const Icon: React.FC<Props> = ({ type }) => {
+interface Props {
+    type: keyof typeof icons
+    className?: string;
+}
+
+export const Icon: React.FC<Props> = ({ type, className }) => {
     return (
         <>
-            {type === 'arrow-down' && <img src='/icon/arrow-down-icon.svg' />}
-            {type === 'arrow-up' && <img src='/icon/arrow-up-icon.svg' />}
-            {type === 'arrow-right' && <img src='/icon/arrow-right-icon.svg' />}
-            {type === 'close' && <img src='/icon/arrow-right-icon.svg' />}
-            {type === 'edit-profile' && <img src='/icon/edit-profile-icon.svg' />}
-            {type === 'eye' && <img src='/icon/eye-icon.svg' />}
-            {type === 'humans' && <img src='/icon/humans-icon.svg' />}
-            {type === 'language' && <img src='/icon/language-icon.svg' />}
-            {type === 'location' && <img src='/icon/location-icon.svg' />}
-            {type === 'mail' && <img src='/icon/mail-icon.svg' />}
-            {type === 'person' && <img src='/icon/person-icon.svg' />}
-            {type === 'signout' && <img src='/icon/signout-icon.svg' />}
-            {type === 'tick' && <img src='/icon/tick-icon.svg' />}
+            {Object.keys(icons).map((item) => {
+                if (item === type) {
+                    return <img key={item} src={`/icon/${icons[item]}`} className={className} />
+                }
+            })}
         </>
     )
 }
