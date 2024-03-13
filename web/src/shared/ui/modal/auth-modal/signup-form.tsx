@@ -61,7 +61,7 @@ export const SignUpForm: React.FC<Props> = ({ setAuthectionType }) => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 animate-fadeIn'>
             <Input placeholder='Fullname' register={register('fullname', { required: 'Name must be 3 char', minLength: { value: 3, message: 'Name must be 3 char' } })} error={errors.fullname} />
-            <Input placeholder='Email' register={register('email', { required: 'Required field', })} error={errors.email} />
+            <Input placeholder='Email' register={register('email', { required: 'Required field' })} error={errors.email} />
             <Input placeholder='Password' register={register('password', { required: 'Name must be 6 char', minLength: { value: 6, message: 'Password must be 6 char' } })} error={errors.password} />
             <Select content={countries} defaultValue='Select country' selected={selectedCountry} setSelected={setSelectedCountry} />
             {selectedCountry === 'Turkmenistan' && <Select content={regions} defaultValue='Select region' selected={selectedRegion} setSelected={setSelectedRegion} />}
