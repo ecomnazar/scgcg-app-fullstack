@@ -21,7 +21,7 @@ export const Input: React.FC<Props> = ({ className, placeholder, error, register
                 type={type}
                 placeholder={placeholder}
                 className={clsx('border border-[#D0D5DD] outline-none placeholder:text-[#a6aebe] text-[#101828] placeholder:text-dark/50 w-full h-[42px] px-[14px] focus:border-primary-300 focus:shadow-[0_0px_1px_3px_#eee8ff] text-[14px] rounded-[8px]', className)} />
-            {error?.message && <span className='text-error text-[13px] block'>{error.message}</span>}
+            {error?.message && <span className='text-red-500 text-[11px] block'>{error.message}</span>}
         </div>
     )
 }

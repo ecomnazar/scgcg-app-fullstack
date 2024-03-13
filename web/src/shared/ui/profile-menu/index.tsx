@@ -1,17 +1,18 @@
 import React from 'react'
 import { Icon } from '../icon'
 import clsx from 'clsx'
-import { isUserRegistered } from '@/shared/lib/is-user-registed'
 import { useOutsideClick } from '@/shared/lib/hooks/useOutsideClick'
 import { BaseContext } from '@/app/providers/useContextProvider'
+import { getAccessToken } from '@/shared/lib/token'
 
 export const ProfileMenu = () => {
     const { setAuthModal } = React.useContext(BaseContext)
     const [showMenu, setShowMenu] = React.useState(false)
     const menuRef = useOutsideClick(() => setShowMenu(false))
+    const token = getAccessToken()
 
     const handleShowMenu = () => {
-        if (isUserRegistered()) {
+        if (token) {
             setShowMenu(true)
         } else {
             setAuthModal(true)

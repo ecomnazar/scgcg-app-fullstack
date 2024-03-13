@@ -6,4 +6,10 @@ export class CreateUserDto {
 
   @MinLength(6, { message: 'Password must be more than 6 symbols' })
   password: string;
+
+  @MinLength(3, { message: 'Fullname must be more than 3 symbols' })
+  fullname: string;
+
+  region: string;
+  gender: string;
 }
