@@ -29,7 +29,7 @@ export const SignInForm: React.FC<Props> = ({ setAuthectionType }) => {
         await signinApi(data)
             .then(() => {
                 setAuthModal(false)
-                toast.success('Registered logged in')
+                toast.success('Registered successfully')
             })
             .finally(() => setLoading(false))
             .catch(() => console.log('error'))
