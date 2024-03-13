@@ -1,10 +1,7 @@
-import { Category } from 'src/category/entities/category.entity';
-import { Transaction } from 'src/transaction/entities/transaction.entity';
 import {
   Column,
   CreateDateColumn,
   Entity,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -20,15 +17,14 @@ export class User {
   @Column()
   password: string;
 
-  @OneToMany(() => Category, (category) => category.user, {
-    onDelete: 'CASCADE',
-  })
-  categories: Category[];
+  @Column()
+  fullname: string;
 
-  @OneToMany(() => Transaction, (transaction) => transaction.user, {
-    onDelete: 'CASCADE',
-  })
-  transactions: Transaction[];
+  @Column()
+  region: string;
+
+  @Column()
+  gender: string;
 
   @CreateDateColumn()
   createdAt: Date;

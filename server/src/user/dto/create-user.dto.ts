@@ -11,5 +11,6 @@ export class CreateUserDto {
   fullname: string;
 
   region: string;
+
   gender: string;
 }
