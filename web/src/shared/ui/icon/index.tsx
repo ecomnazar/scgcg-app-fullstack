@@ -4,7 +4,7 @@ const icons = {
     'arrow-down': 'arrow-down-icon.svg',
     'arrow-up': 'arrow-up-icon.svg',
     'arrow-right': 'arrow-right-icon.svg',
-    'close': 'arrow-right-icon.svg',
+    'close': 'close-icon.svg',
     'edit-profile': 'edit-profile-icon.svg',
     'eye': 'eye-icon.svg',
     'humans': 'humans-icon.svg',

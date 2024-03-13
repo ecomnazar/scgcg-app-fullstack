@@ -3,16 +3,18 @@ import { Icon } from '../icon'
 import clsx from 'clsx'
 import { isUserRegistered } from '@/shared/lib/is-user-registed'
 import { useOutsideClick } from '@/shared/lib/hooks/useOutsideClick'
+import { BaseContext } from '@/app/providers/useContextProvider'
 
 export const ProfileMenu = () => {
-    const [showMenu, setShowMenu] = React.useState(true)
+    const { setAuthModal } = React.useContext(BaseContext)
+    const [showMenu, setShowMenu] = React.useState(false)
     const menuRef = useOutsideClick(() => setShowMenu(false))
 
     const handleShowMenu = () => {
         if (isUserRegistered()) {
             setShowMenu(true)
         } else {
-            console.log('not registered')
+            setAuthModal(true)
         }
     }
 

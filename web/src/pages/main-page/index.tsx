@@ -4,12 +4,14 @@ import { Container } from "@/shared/ui/container"
 import { LanguageSelector } from "@/shared/ui/language-selector"
 import { Button } from "@/shared/ui/button"
 import { ProfileMenu } from "@/shared/ui/profile-menu"
+import { AuthModal } from "@/shared/ui/modal/auth-modal"
 
 export const MainPage = () => {
   const percent = 50
 
   return (
     <>
+      <AuthModal />
       <section>
         <Container>
           <nav className="flex items-center justify-between py-8 gap-x-4">
