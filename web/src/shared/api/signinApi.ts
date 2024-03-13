@@ -15,7 +15,6 @@ export const signinApi = async (data: Props) => {
       API_ENDPOINTS.SIGNIN,
       data
     )) as IResponse;
-    console.log(response.data);
     setUserLocalStorage(JSON.stringify(response.data.user));
     setAccessToken(response.data.token);
     return response.data;

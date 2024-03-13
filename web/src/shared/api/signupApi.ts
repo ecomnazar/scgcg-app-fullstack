@@ -3,7 +3,7 @@ import { setAccessToken } from "../lib/token";
 import { API_ENDPOINTS } from "./endpoints";
 import { instance } from "./instance";
 
-interface IUser {
+export interface IUser {
   email: string;
   fullname: string;
   gender: string;

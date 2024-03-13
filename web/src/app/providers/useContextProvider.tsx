@@ -11,7 +11,7 @@ interface ContextProps {
 
 export const BaseContext = React.createContext({} as ContextProps)
 export const UseContextProvider: React.FC<Props> = ({ children }) => {
-    const [authModal, setAuthModal] = React.useState(true)
+    const [authModal, setAuthModal] = React.useState(false)
     return (
         <BaseContext.Provider value={{ authModal, setAuthModal }}>
             {children}
