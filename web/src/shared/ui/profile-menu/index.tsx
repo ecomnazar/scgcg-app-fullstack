@@ -6,12 +6,10 @@ import { BaseContext } from '@/app/providers/useContextProvider'
 import { getAccessToken } from '@/shared/lib/token'
 import { getUserLocalStorage } from '@/shared/lib/localStorage'
 import { IUser } from '@/shared/api/signupApi'
-import { LogoutConfirmModal } from '../modal/logout-confirm-modal'
 
 export const ProfileMenu = () => {
-    const { setAuthModal } = React.useContext(BaseContext)
+    const { setAuthModal, setLogoutModal } = React.useContext(BaseContext)
     const [showMenu, setShowMenu] = React.useState(false)
-    const [logoutConfirmModal, setLogoutConfirmModal] = React.useState(false)
     const menuRef = useOutsideClick(() => setShowMenu(false))
     const token = getAccessToken()
     const user: IUser = getUserLocalStorage()
@@ -58,7 +56,7 @@ export const ProfileMenu = () => {
                             <p className='text-secondary text-[14px]'>Edit profile</p>
                         </li>
                         <li onClick={() => {
-                            setLogoutConfirmModal(true)
+                            setLogoutModal(true)
                             setShowMenu(false)
                         }} className='flex items-center gap-x-2 cursor-pointer'>
                             <Icon type={'signout'} className='w-[22px]' />
@@ -67,7 +65,6 @@ export const ProfileMenu = () => {
                     </ul>
                 </div>
             </div>
-            <LogoutConfirmModal isOpen={logoutConfirmModal} setIsOpen={setLogoutConfirmModal} />
         </>
     )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import i18next from 'i18next'
-import { languages } from '@/shared/lib/constants'
 import { Listbox, Transition } from '@headlessui/react'
 import { Icon } from '../icon'
+import { languages } from '@/shared/lib/constants/languages'
 
 export const LanguageSelector = () => {
     const onChangeLanguage = (lang: string) => i18next.changeLanguage(lang)
