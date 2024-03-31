@@ -5,8 +5,10 @@ import { Button } from "@/shared/ui/button"
 import { AuthModal } from "@/shared/ui/modal/auth-modal"
 import { Footer } from "@/shared/ui/footer"
 import { Navbar } from "@/shared/ui/navbar"
+import { useNavigate } from "react-router-dom"
 
 export const MainPage = () => {
+  const navigate = useNavigate()
   const percent = 50
 
   return (
@@ -18,7 +20,7 @@ export const MainPage = () => {
           <div className="max-w-[1370px] text-center mx-auto text-white">
             <h2 className="capitalize font-semibold text-[30px] lg:text-[50px] mb-[33px]">the specialized course on gender-centred governance for civil servants</h2>
             <p className="text-[15px] md:text-[16px] lg:text-[18px] mb-[65px]">The attitude and behavior of state employees should be guided by respect for human rights and the need to safeguard the dignity and rights of citizens.</p>
-            <Button className="!text-primary !bg-[#ffffff] font-semibold" title={"Start course"} />
+            <Button className="!text-primary !bg-[#ffffff] font-semibold" title={"Start course"} onClick={() => navigate('/course')} />
           </div>
         </Container >
       </section >

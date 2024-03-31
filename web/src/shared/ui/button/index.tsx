@@ -12,7 +12,7 @@ interface Props extends React.HTMLAttributes<HTMLButtonElement> {
 
 export const Button: React.FC<Props> = ({ title, className, type = 'button', loading = false, size = 'medium', ...props }) => {
     return (
-        <button {...props} type={type} className={clsx("relative px-[22px] bg-primary rounded-[8px] text-white", className, {
+        <button {...props} type={type} className={clsx("relative hover:opacity-90 transition-all px-[22px] bg-primary rounded-[8px] text-white", className, {
             'text-[14px] h-[42px]': size === 'small',
             'h-[48px]': size === 'medium',
             'opacity-80': loading

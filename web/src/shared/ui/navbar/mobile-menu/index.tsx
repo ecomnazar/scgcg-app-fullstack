@@ -14,9 +14,7 @@ export const MobileMenu = () => {
     const token = getAccessToken()
     const { setAuthModal, setLogoutModal } = React.useContext(BaseContext)
 
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng)
-    }
+    const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
     const handleRegister = () => {
         setAuthModal(true)
