@@ -9,7 +9,7 @@ export const removeUserLocalStorage = () => localStorage.removeItem("user");
 
 // ----------------
 
-export const setActiveCourse = (data: string) =>
+export const setActiveCourseLS = (data: string) =>
   localStorage.setItem("activeCourse", data);
 export const getActiveCourse = (): number[] =>
   localStorage.getItem("activeCourse")

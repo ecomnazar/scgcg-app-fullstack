@@ -17,7 +17,7 @@ export const CoursePage = () => {
         <>
             <Navbar />
             <div className='flex'>
-                <div className='h-screen w-[calc(100vw-400px)] text-dark flex items-center border border-dark justify-center'>
+                <div className='h-[calc(100vh-145px)] w-[calc(100vw-400px)] text-dark flex items-center border border-dark justify-center'>
                     <div className='border border-dark py-12 px-8 h-[80%] w-[80%] overflow-scroll rounded-[8px]'>
                         {courses[activeCourse[0]][activeCourse[1]]}
                     </div>

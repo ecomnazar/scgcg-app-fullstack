@@ -15,6 +15,7 @@ import { Session6Test } from "./lesson-6/Session-6-Test";
 export const courses = [
     [<Introduction />],
     [<Session1 />, <Session1Test />],
+    // [<Session1Test />, <Session1Test />],
     [<Session2 />, <Session2Test />],
     [<Session3 />, <Session3Test />],
     [<Session4 />, <Session4Test />],

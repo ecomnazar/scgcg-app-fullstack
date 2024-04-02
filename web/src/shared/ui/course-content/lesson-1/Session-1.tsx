@@ -1,9 +1,9 @@
 import { MainTitle } from '../../main-title'
 import { Paragraph } from '../../paragraph'
-import { FadeIn } from '../../animation/fadeIn'
 import { Flex } from '../../flex'
 import { FlexWrapper } from '../../flex-wrapper'
 import { NextButton } from '../../button/nextButton'
+import { FadeFromSide } from '../../animation/fadeFromSide'
 
 export const Session1 = () => {
   return (
@@ -15,10 +15,16 @@ export const Session1 = () => {
             <Paragraph>„Parents of the first children born on Ashgabat’s anniversary receive gifts on behalf of the head of the state“ Published 25.05.2021</Paragraph>
           }
           right={
-            <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/1.png' /></FadeIn>
+            <FadeFromSide>
+              <img className='rounded-[8px]' src='/lessons/day-1/session-1/1.png' />
+            </FadeFromSide>
           }
         />
-        <Flex left={<FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/2.png' /></FadeIn>} right={<div>
+        <Flex left={
+          <FadeFromSide left>
+            <img className='rounded-[8px]' src='/lessons/day-1/session-1/2.png' />
+          </FadeFromSide>
+        } right={<div>
           <Paragraph>What is the sex of the children ? </Paragraph>
           <Paragraph>How do you know ?</Paragraph>
         </div>} />
@@ -27,10 +33,14 @@ export const Session1 = () => {
             <Paragraph>Dresses end uniforms Girls and boys </Paragraph>
           }
           right={
-            <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/3.png' /></FadeIn>
+            <FadeFromSide>
+              <img className='rounded-[8px]' src='/lessons/day-1/session-1/3.png' />
+            </FadeFromSide>
           }
         />
-        <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/4.png' /></FadeIn>
+        <FadeFromSide left>
+          <img className='rounded-[8px]' src='/lessons/day-1/session-1/4.png' />
+        </FadeFromSide>
         <MainTitle>Sex & Gender</MainTitle>
         <Flex
           left={
@@ -53,22 +63,20 @@ export const Session1 = () => {
               </div>
             </div>
           }
-          right={
-            <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/5.png' /></FadeIn>
-          }
+          right={<FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/5.png' /></FadeFromSide>}
         />
         <Paragraph>Sex – biological , anatomical, physiological characteristic that  distinguish women and man </Paragraph>
         <Paragraph>Gender – set of socialy determent characteristics of one sex, probably created with origin devison of labor (prehistory),survived even when it lost its original function as instrument of sex politics in sociaty; it is renewed in each individual in the process of growing up and education thanks to its apparent naturalness </Paragraph>
         <MainTitle>Gender norms and regime in sociaty </MainTitle>
-        <Flex left={<FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/6.png' /></FadeIn>} right={<Paragraph>In every society, in every community, there are gender regimes. They determine how women and man participate in diferent  spheres of society (public and private); within them all our relationships are established, including  our family life  and partner relationships.</Paragraph>} />
-        <MainTitle>Gender  regime (system)</MainTitle>
-        <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/7.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/8.png' />} />
-        <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/9.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/10.png' />} />
+        <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/6.png' /></FadeFromSide>} right={<Paragraph>In every society, in every community, there are gender regimes. They determine how women and man participate in diferent  spheres of society (public and private); within them all our relationships are established, including  our family life  and partner relationships.</Paragraph>} />
+        <MainTitle>Gender regime (system)</MainTitle>
+        <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/7.png' /></FadeFromSide>} right={<FadeFromSide> <img className='rounded-[8px]' src='/lessons/day-1/session-1/8.png' /></FadeFromSide>} />
+        <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/9.png' /></FadeFromSide>} right={<FadeFromSide> <img className='rounded-[8px]' src='/lessons/day-1/session-1/10.png' /></FadeFromSide>} />
         <MainTitle>Gender norms and gender regime </MainTitle>
-        <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/11.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/12.png' />} />
-        <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/13.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/14.png' />} />
+        <Flex left={<FadeFromSide left ><img className='rounded-[8px]' src='/lessons/day-1/session-1/11.png' /></FadeFromSide>} right={<FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/12.png' /></FadeFromSide>} />
+        <Flex left={<FadeFromSide left ><img className='rounded-[8px]' src='/lessons/day-1/session-1/13.png' /></FadeFromSide>} right={<FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/14.png' /></FadeFromSide>} />
         <MainTitle>Gender roles</MainTitle>
-        <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/15.png' />} right={<div className='space-y-2'><img className='rounded-[8px]' src='/lessons/day-1/session-1/16.png' /><img className='rounded-[8px]' src='/lessons/day-1/session-1/17.png' /></div>} />
+        <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/15.png' /></FadeFromSide>} right={<div className='space-y-2'><FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/16.png' /></FadeFromSide><FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/17.png' /></FadeFromSide></div>} />
         <Paragraph>Gender roles are learned in the processes of socialization and growing up; gender rules are adopted from culture, parents, peers, school, media, customs, religion, market, art...Gender roles are learned in the processes of socialization and growing up; gender rules are adopted from culture, parents, peers, school, media, customs, religion, market, art...</Paragraph>
         <Paragraph>Gender roles are  the sum of characteristics, ways of behaving, attitudes, activities, norms, obligations and expectations that a certain society or culture assigns and demands from people bering in mind  their sex</Paragraph>
         <NextButton />

@@ -3,15 +3,23 @@ import { Button } from '.'
 import { BaseContext } from '@/app/providers/useContextProvider'
 import { courses } from '../course-content'
 import { useNavigate } from 'react-router-dom'
+import { getActiveCourse, setActiveCourseLS } from '@/shared/lib/localStorage'
 
 export const NextButton = () => {
     const { activeCourse, setActiveCourse } = useContext(BaseContext)
+    const activeCourseLS = getActiveCourse()
+
     const navigate = useNavigate()
+    console.log(activeCourseLS[0]);
+
 
     const handleNext = () => {
         // it is for first navigation
         if (activeCourse[0] === 0) {
             setActiveCourse([1, 0])
+            if (activeCourseLS[0] === 0) {
+                setActiveCourseLS(JSON.stringify([1, 0])) // set to localstorage first navigation
+            }
             return
         }
 
@@ -25,6 +33,15 @@ export const NextButton = () => {
             setActiveCourse([activeCourse[0] + 1, 0])
         } else {
             setActiveCourse([activeCourse[0], activeCourse[1] + 1])
+        }
+
+        // to change lesson in localstorage
+        if (activeCourseLS[0] <= activeCourse[0] && activeCourse[1] === 1) {
+            setActiveCourseLS(JSON.stringify([activeCourse[0] + 1, 0]))
+        }
+
+        if (activeCourseLS[0] <= activeCourse[0]) {
+            // setActiveCourseLS(JSON.stringify([activeCourseLS[0], activeCourse[1]]))
         }
 
     }
