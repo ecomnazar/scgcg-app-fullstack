@@ -8,7 +8,7 @@ interface Props {
 
 export const FlexWrapper: React.FC<Props> = ({ children, className }) => {
     return (
-        <div className={clsx('space-y-8', className)}>
+        <div className={clsx('space-y-8 pb-12', className)}>
             {children}
         </div>
     )

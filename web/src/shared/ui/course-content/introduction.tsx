@@ -1,6 +1,6 @@
 import { MainTitle } from '../main-title'
 import { Paragraph } from '../paragraph'
-import { Button } from '../button'
+import { NextButton } from '../button/nextButton'
 
 export const Introduction = () => {
     return (
@@ -15,7 +15,7 @@ export const Introduction = () => {
             <Paragraph>That is why this course is intended for civil servants in order to enable them to understand their role in achieving gender equality and improve their knowledge in this area.</Paragraph>
             <Paragraph>The course is organized through six lessons. Each lesson offers definitions of terms, examples, and short videos that illustrate or further explain the lesson. At the end of each lesson there is a short test that you need to complete to show that you have mastered the knowledge.</Paragraph>
             <Paragraph>After completing the course, you will receive a certificate.</Paragraph>
-            <Button className='float-right' title={'Next'} />
+            <NextButton />
         </>
     )
 }

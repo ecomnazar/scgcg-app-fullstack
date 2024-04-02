@@ -6,3 +6,12 @@ export const getUserLocalStorage = () =>
     : null;
 
 export const removeUserLocalStorage = () => localStorage.removeItem("user");
+
+// ----------------
+
+export const setActiveCourse = (data: string) =>
+  localStorage.setItem("activeCourse", data);
+export const getActiveCourse = (): number[] =>
+  localStorage.getItem("activeCourse")
+    ? JSON.parse(localStorage.getItem("activeCourse")!)
+    : [0, 0];

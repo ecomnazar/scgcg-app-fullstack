@@ -5,10 +5,10 @@ import { Flex } from '../../flex'
 import { FlexWrapper } from '../../flex-wrapper'
 import { NextButton } from '../../button/nextButton'
 
-export const Session1 = () => {
+export const Session6 = () => {
   return (
     <>
-      <MainTitle>Gender, GENDER NORMS And Gender  Equality</MainTitle>
+      <MainTitle>6</MainTitle>
       <FlexWrapper>
         <Flex
           left={
@@ -72,7 +72,6 @@ export const Session1 = () => {
         <Paragraph>Gender roles are learned in the processes of socialization and growing up; gender rules are adopted from culture, parents, peers, school, media, customs, religion, market, art...Gender roles are learned in the processes of socialization and growing up; gender rules are adopted from culture, parents, peers, school, media, customs, religion, market, art...</Paragraph>
         <Paragraph>Gender roles are  the sum of characteristics, ways of behaving, attitudes, activities, norms, obligations and expectations that a certain society or culture assigns and demands from people bering in mind  their sex</Paragraph>
         <NextButton />
-
       </FlexWrapper>
 
     </>
