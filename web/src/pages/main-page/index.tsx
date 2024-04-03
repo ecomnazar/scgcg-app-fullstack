@@ -1,4 +1,3 @@
-import clsx from "clsx"
 import { Icon } from "@/shared/ui/icon"
 import { Container } from "@/shared/ui/container"
 import { Button } from "@/shared/ui/button"
@@ -6,10 +5,10 @@ import { AuthModal } from "@/shared/ui/modal/auth-modal"
 import { Footer } from "@/shared/ui/footer"
 import { Navbar } from "@/shared/ui/navbar"
 import { useNavigate } from "react-router-dom"
+import { ProgressLine } from "@/shared/ui/progress-line"
 
 export const MainPage = () => {
   const navigate = useNavigate()
-  const percent = 50
 
   return (
     <>
@@ -45,12 +44,7 @@ export const MainPage = () => {
             </div>
             <div className="basis-[100%] lg:basis-[40%]">
               <h4 className="font-semibold text-[20px] lg:text-[22px] text-left">The specialized course on gender-centred governance for civil servants</h4>
-              <div className="flex items-center gap-x-3 mt-6 mb-2">
-                <div className="bg-[#EDEDED] h-[10px] w-[200px] sm:w-[300px] rounded-[8px] relative">
-                  <div style={{ width: percent + '%' }} className={clsx(`absolute top-0 left-0 h-full bg-primary rounded-[6px]`)}></div>
-                </div>
-                <p>{percent}%</p>
-              </div>
+              <ProgressLine />
               <div className="space-y-2 mb-8">
                 <div>
                   <h4 className="font-semibold mb-1">Duration:</h4>

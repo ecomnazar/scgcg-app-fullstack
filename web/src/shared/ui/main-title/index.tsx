@@ -12,6 +12,6 @@ export const MainTitle: React.FC<Props> = ({ children, className }) => {
     return <motion.div initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}>
-        <h2 className={clsx('text-primary text-[35px] font-semibold pb-2 border-b-2 border-primary/30 mb-4', className)}>{children}</h2>
+        <h2 className={clsx('text-primary text-[25px] lg:text-[35px] font-semibold pb-2 border-b-2 border-primary/30 mb-4', className)}>{children}</h2>
     </motion.div>
 }
