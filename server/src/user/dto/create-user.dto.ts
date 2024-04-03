@@ -14,3 +14,8 @@ export class CreateUserDto {
 
   gender: string;
 }
+
+export class CreateCertDto {
+  fullname: string;
+  id: string;
+}

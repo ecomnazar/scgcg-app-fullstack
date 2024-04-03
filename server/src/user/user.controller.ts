@@ -7,7 +7,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { UserService } from './user.service';
-import { CreateUserDto } from './dto/create-user.dto';
+import { CreateCertDto, CreateUserDto } from './dto/create-user.dto';
 
 @Controller('user')
 export class UserController {
@@ -22,6 +22,11 @@ export class UserController {
   @Get()
   findAll() {
     return this.userService.findAll();
+  }
+
+  @Post('/cert')
+  getCert(@Body() createCertDto: CreateCertDto) {
+    return this.userService.generateCert(createCertDto);
   }
   // @Get(':id')
   // findOne(@Param('id') id: number) {

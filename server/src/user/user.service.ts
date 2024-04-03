@@ -1,10 +1,11 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
+import { CreateCertDto, CreateUserDto } from './dto/create-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
 import { Repository } from 'typeorm';
 import * as argon2 from 'argon2';
 import { JwtService } from '@nestjs/jwt';
+import { compositeImage } from './lib/compositeImage';
 
 @Injectable()
 export class UserService {
@@ -40,5 +41,11 @@ export class UserService {
 
   async findAll() {
     return await this.userRepository.find();
+  }
+
+  async generateCert(createCertDto: CreateCertDto) {
+    const { fullname, id } = createCertDto;
+    compositeImage(fullname, id);
+    return { message: 'file saved successfully' };
   }
 }
