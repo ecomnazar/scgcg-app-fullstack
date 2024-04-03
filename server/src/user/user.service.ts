@@ -6,6 +6,7 @@ import { Repository } from 'typeorm';
 import { JwtService } from '@nestjs/jwt';
 import { compositeImage } from './lib/compositeImage';
 import * as argon2 from 'argon2';
+import { MailerService } from '@nestjs-modules/mailer';
 
 @Injectable()
 export class UserService {
@@ -13,6 +14,7 @@ export class UserService {
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
     private readonly jwtService: JwtService,
+    private mailerService: MailerService,
   ) {}
   async create(createUserDto: CreateUserDto) {
     const existUser = await this.userRepository.findOne({
@@ -44,8 +46,25 @@ export class UserService {
   }
 
   async generateCert(createCertDto: CreateCertDto) {
-    const { fullname, id } = createCertDto;
-    compositeImage(fullname, id);
+    const { fullname, id, email } = createCertDto;
+    const res = await compositeImage(fullname, id);
+
+    try {
+      await this.mailerService.sendMail({
+        to: email,
+        // from: '"Support Team" <support@example.com>', // override default from
+        subject: 'Certificate',
+        attachments: [
+          {
+            path: res,
+            filename: `${fullname}.jpg`,
+          },
+        ],
+      });
+      console.log('success');
+    } catch (error) {
+      console.log(error);
+    }
     return { message: 'file saved successfully' };
   }
 }

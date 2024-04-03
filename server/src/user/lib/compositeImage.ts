@@ -44,4 +44,5 @@ export const compositeImage = async (fullname: string, userId: string) => {
       { input: Buffer.from(idText), left: 180, top: 165 },
     ])
     .toFile(__dirname + `/processed_images/${date}.jpg`);
+  return __dirname + `/processed_images/${date}.jpg`;
 };

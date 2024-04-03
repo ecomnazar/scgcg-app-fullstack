@@ -18,4 +18,5 @@ export class CreateUserDto {
 export class CreateCertDto {
   fullname: string;
   id: string;
+  email: string;
 }
