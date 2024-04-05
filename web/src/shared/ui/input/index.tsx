@@ -4,7 +4,7 @@ import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 // 50 accent of color to shadow on focus
 // 300 accent of color to border on focus
 
-interface Props extends React.HTMLAttributes<HTMLInputElement> {
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
     className?: string
     placeholder?: string;
     error?: FieldError;

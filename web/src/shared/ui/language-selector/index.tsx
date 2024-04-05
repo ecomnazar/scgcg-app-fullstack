@@ -22,7 +22,7 @@ export const LanguageSelector = () => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-primary/40 py-1 text-base ">
+                    <Listbox.Options className="z-[9999] absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-primary/40 py-1 text-base ">
                         {languages.map((language, personIdx) => (
                             <Listbox.Option
                                 key={personIdx}
