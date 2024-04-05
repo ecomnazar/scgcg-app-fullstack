@@ -1,80 +1,114 @@
-import { MainTitle } from '../../main-title'
-import { Paragraph } from '../../paragraph'
-import { FadeIn } from '../../animation/fadeIn'
 import { Flex } from '../../flex'
+import { Paragraph } from '../../paragraph'
+import { MainTitle } from '../../main-title'
 import { FlexWrapper } from '../../flex-wrapper'
 import { NextButton } from '../../button/nextButton'
+import { FadeFromSide } from '../../animation/fadeFromSide'
+import { Image } from '../../image'
 
 export const Session2 = () => {
+    const source = '/lessons/day-2/session-1/'
     return (
         <>
-            <MainTitle>2</MainTitle>
+            <MainTitle>Equality</MainTitle>
             <FlexWrapper>
-                <Flex
-                    left={
-                        <Paragraph>„Parents of the first children born on Ashgabat’s anniversary receive gifts on behalf of the head of the state“ Published 25.05.2021</Paragraph>
-                    }
-                    right={
-                        <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/1.png' /></FadeIn>
-                    }
-                />
-                <Flex left={<FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/2.png' /></FadeIn>} right={<div>
-                    <Paragraph>What is the sex of the children ? </Paragraph>
-                    <Paragraph>How do you know ?</Paragraph>
+                <FadeFromSide left><Image source={source + '1.png'} /></FadeFromSide>
+                <MainTitle>EQUALITY  Vs DISCRIMINATION</MainTitle>
+                <Flex left={<FadeFromSide left><Image source={source + '3.png'} /></FadeFromSide>} right={<div>
+                    <Paragraph>What is  discrimination ?</Paragraph>
+                    <Paragraph>lat. discriminare – to separate,  make a difference </Paragraph>
+                    <Paragraph>"Discriminate", "separate", "make a difference“ , means  impermissible  distinction between people </Paragraph>
+                    <Paragraph>Unequal (less favorable treatment) of individuals and groups, based on their personal characteristics</Paragraph>
                 </div>} />
-                <Flex
-                    left={
-                        <Paragraph>Dresses end uniforms Girls and boys </Paragraph>
-                    }
-                    right={
-                        <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/3.png' /></FadeIn>
-                    }
-                />
-                <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/4.png' /></FadeIn>
-                <MainTitle>Sex & Gender</MainTitle>
-                <Flex
-                    left={
-                        <div className='space-y-4'>
-                            <div>
-                                <Paragraph className='mb-0'>Sex</Paragraph>
-                                <ul className='translate-x-2'>
-                                    <li>- Biological differences</li>
-                                    <li>- Mostly unchangeable</li>
-                                    <li>- The same in all times and at all places in the world</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <Paragraph className='mb-0'>Gender</Paragraph>
-                                <ul className='translate-x-2'>
-                                    <li>- Socialy constructed differences among women and man</li>
-                                    <li>- They are changable</li>
-                                    <li>- They are shape in time and space (different in different places)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    }
-                    right={
-                        <FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/5.png' /></FadeIn>
-                    }
-                />
-                <Paragraph>Sex – biological , anatomical, physiological characteristic that  distinguish women and man </Paragraph>
-                <Paragraph>Gender – set of socialy determent characteristics of one sex, probably created with origin devison of labor (prehistory),survived even when it lost its original function as instrument of sex politics in sociaty; it is renewed in each individual in the process of growing up and education thanks to its apparent naturalness </Paragraph>
-                <MainTitle>Gender norms and regime in sociaty </MainTitle>
-                <Flex left={<FadeIn><img className='rounded-[8px]' src='/lessons/day-1/session-1/6.png' /></FadeIn>} right={<Paragraph>In every society, in every community, there are gender regimes. They determine how women and man participate in diferent  spheres of society (public and private); within them all our relationships are established, including  our family life  and partner relationships.</Paragraph>} />
-                <MainTitle>Gender  regime (system)</MainTitle>
-                <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/7.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/8.png' />} />
-                <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/9.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/10.png' />} />
-                <MainTitle>Gender norms and gender regime </MainTitle>
-                <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/11.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/12.png' />} />
-                <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/13.png' />} right={<img className='rounded-[8px]' src='/lessons/day-1/session-1/14.png' />} />
-                <MainTitle>Gender roles</MainTitle>
-                <Flex left={<img className='rounded-[8px]' src='/lessons/day-1/session-1/15.png' />} right={<div className='space-y-2'><img className='rounded-[8px]' src='/lessons/day-1/session-1/16.png' /><img className='rounded-[8px]' src='/lessons/day-1/session-1/17.png' /></div>} />
-                <Paragraph>Gender roles are learned in the processes of socialization and growing up; gender rules are adopted from culture, parents, peers, school, media, customs, religion, market, art...Gender roles are learned in the processes of socialization and growing up; gender rules are adopted from culture, parents, peers, school, media, customs, religion, market, art...</Paragraph>
-                <Paragraph>Gender roles are  the sum of characteristics, ways of behaving, attitudes, activities, norms, obligations and expectations that a certain society or culture assigns and demands from people bering in mind  their sex</Paragraph>
+                <MainTitle>Identity, uniqe personality</MainTitle>
+                <Flex left={<div>
+                    <Paragraph>Identity - what defines us as individuals and makes us unique personalities
+                        Identity is like an onion - each layer represents a part of the identity
+                    </Paragraph>
+                    <Paragraph className='mb-0'>Elements of identity</Paragraph>
+                    <ul>
+                        <li>1. Elements of identity </li>
+                        <li>2. The influence of eenvironment - citizenship, place of residence, gender role... </li>
+                        <li>3. Own choices - marital and family status, political conviction, union membership...</li>
+                    </ul>
+                    <Paragraph>Changeable and unchangeable parts of identity. Each person is a complex, unique and irreplaceable individual.</Paragraph>
+                </div>} right={<FadeFromSide><Image source={source + '4.png'} /></FadeFromSide>} />
+                <MainTitle> What drive discrimination?</MainTitle>
+                <FadeFromSide><Image source={source + '5.png'} /></FadeFromSide>
+                <MainTitle>Gender stereotypes</MainTitle>
+                <Flex left={<FadeFromSide left><Image source={source + '6.png'} /></FadeFromSide>} right={<FadeFromSide><Image source={source + '7.png'} /></FadeFromSide>} />
+                <MainTitle>Stereotypes:</MainTitle>
+                <Flex left={<ul>
+                    <Paragraph>1. perpetuate inequality</Paragraph>
+                    <Paragraph>2. maintain gender roles</Paragraph>
+                    <Paragraph>3. reduce the understanding of the concept of human rights</Paragraph>
+                    <Paragraph>4. It is not easy to recognize or reduce them</Paragraph>
+                </ul>} right={<FadeFromSide><Image source={source + '8.png'} /></FadeFromSide>} />
+                <MainTitle>Prejudices</MainTitle>
+                <Flex left={<div>
+                    <Paragraph>Prejudice - a hostile or negative attitude towards a recognizable group of people, which is based solely on their belonging to that group </Paragraph>
+                    <Paragraph>Praejudicium - prae (in advance) and judicium (to judge) - judging in advance </Paragraph>
+                    <Paragraph>A preconceived opinion not based on any reasonable ground or actual state of affairs</Paragraph>
+                </div>} right={<FadeFromSide><Image source={source + '9.png'} /></FadeFromSide>} />
+                <MainTitle>Prejudices, emotional  part</MainTitle>
+                <Paragraph>People with prejudices direct their prejudices towards members of the group as a whole, ignoring the personal characteristics that make these people different from each other.</Paragraph>
+                <Paragraph>1. Negative feeling, discomfort, fear ...</Paragraph>
+                <Paragraph>2. They make us to  interpret other people and situations as threatening to ourselves.</Paragraph>
+                <Paragraph>3. We act like we have  to protect ourselves, which leads to discriminatory behevior.</Paragraph>
+                <MainTitle>Causes of sterotypes and prejudice</MainTitle>
+                <Flex left={<FadeFromSide left><Image source={source + '10.png'} /></FadeFromSide>} right={<div>
+                    <Paragraph>1. Thinking processes</Paragraph>
+                    <Paragraph>2. Biases towards own and other groups</Paragraph>
+                    <Paragraph>3. Conformism</Paragraph>
+                    <Paragraph>4. Allocation of resources</Paragraph>
+                </div>} />
+                <MainTitle>Thinking processes</MainTitle>
+                <Flex left={<FadeFromSide left><Image source={source + '11.png'} /></FadeFromSide>} right={<div>
+                    <Paragraph>1. Stereotypes and prejudice – accompanying process of interpretaion of information</Paragraph>
+                    <Paragraph>2. Large amount of information</Paragraph>
+                    <Paragraph>3. Limited cognitive capacity</Paragraph>
+                    <Paragraph>4. Social categorization (we and them)</Paragraph>
+                </div>} />
+                <MainTitle>Social categorization “US and Them"</MainTitle>
+                <Flex left={<FadeFromSide left><Image source={source + '12.png'} /></FadeFromSide>} right={<div>
+                    <Paragraph>1. We put information about group members into categories </Paragraph>
+                    <Paragraph>2. We reduce the differences between the members of those groups </Paragraph>
+                    <Paragraph>3. And overestimate the differences between the groups</Paragraph>
+                </div>} />
+                <MainTitle>Conformity</MainTitle>
+                <Flex left={<div>
+                    <Paragraph>1. Compliance with social norms For our society, a certain belief is common</Paragraph>
+                    <Paragraph>2. Throughout our childhood, we adopted beliefs through socialization processes - for example. our parents passed on to us stereotypes about women and men</Paragraph>
+                    <Paragraph>3.  If we want to meet the expectations of the group and get approval from the group - we behave in accordance with social norms</Paragraph>
+                </div>} right={<FadeFromSide><Image source={source + '13.png'} /></FadeFromSide>} />
+                <MainTitle>Allocation of  resources</MainTitle>
+                <Flex left={<div>
+                    <Paragraph>1. Bidding for gaining a greater share of limited resources</Paragraph>
+                    <Paragraph>2. Political position</Paragraph>
+                    <Paragraph>3. Social power</Paragraph>
+                    <Paragraph>3. Achieving a goal</Paragraph>
+                    <Paragraph>3. Scarce resources have been found to lead to conflict between groups and result in increased prejudice and discrimination</Paragraph>
+                </div>} right={<FadeFromSide><Image source={source + '14.png'} /></FadeFromSide>} />
+                <MainTitle> What drive discrimination?</MainTitle>
+                <FadeFromSide left><Image source={source + '15.png'} /></FadeFromSide>
+                <MainTitle>The consequences of stereotypes and prejudices</MainTitle>
+                <Flex left={<FadeFromSide left><Image source={source + '16.png'} /></FadeFromSide>} right={<div>
+                    <Paragraph>1. We rationalize discrimination</Paragraph>
+                    <Paragraph>2. We are spinning in a vicious circle of self-fulfilling prophecy </Paragraph>
+                    <Paragraph>3. Members of groups that are the target of stereotypes have lowered self-esteem and lower sense of self-efficacy </Paragraph>
+                    <Paragraph>4. Weaker mental health</Paragraph>
+                    <Paragraph>5. Less work efficiency, more absenteeism, more resignations, less promotion </Paragraph>
+                    <Paragraph>6. We unconsciously confirm stereotypes</Paragraph>
+                    <Paragraph>7. Stigmatization and marginalization</Paragraph>
+                </div>} />
+                <MainTitle>Modern prejudices</MainTitle>
+                <Paragraph>Due to the insistence on political correctness, most people avoid clearly expressing their stereotypes and prejudices, but when we ask more subtle questions, we recognize  the so-called modern prejudices</Paragraph>
+                <Paragraph>1. The discrimination against a certain group is denied</Paragraph>
+                <Paragraph>2. The group  claim too many rights</Paragraph>
+                <Paragraph>3. The state pays too much attention to their rights</Paragraph>
+                <Paragraph>4. The attitude that  existing state of society should be maintained</Paragraph>
                 <NextButton />
-
             </FlexWrapper>
-
         </>
     )
 }

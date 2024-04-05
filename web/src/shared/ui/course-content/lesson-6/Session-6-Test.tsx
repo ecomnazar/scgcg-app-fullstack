@@ -1,10 +1,7 @@
-import React from 'react'
-import { NextButton } from '../../button/nextButton'
+import { TestForm } from '../../test-form'
+import { questionsDay6 } from '@/shared/constants/questions'
 
 export const Session6Test = () => {
-    return (
-        <div>
-            <NextButton />
-        </div>
-    )
+    return <TestForm questions={questionsDay6} />
+
 }
