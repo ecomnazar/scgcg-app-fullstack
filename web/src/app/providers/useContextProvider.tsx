@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
     children: React.ReactNode
@@ -19,6 +20,14 @@ export const UseContextProvider: React.FC<Props> = ({ children }) => {
     const [authModal, setAuthModal] = React.useState(false)
     const [logoutModal, setLogoutModal] = React.useState(false)
     const [activeCourse, setActiveCourse] = React.useState([0, 0])
+    const { i18n } = useTranslation()
+
+    const lngFromLS = localStorage.getItem('lng') || 'en'
+
+    React.useEffect(() => {
+        i18n.changeLanguage(lngFromLS)
+    }, [])
+
     return (
         <BaseContext.Provider value={{ authModal, setAuthModal, logoutModal, setLogoutModal, activeCourse, setActiveCourse }}>
             {children}
