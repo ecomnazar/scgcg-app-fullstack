@@ -6,9 +6,11 @@ import { Footer } from "@/shared/ui/footer"
 import { Navbar } from "@/shared/ui/navbar"
 import { useNavigate } from "react-router-dom"
 import { ProgressLine } from "@/shared/ui/progress-line"
+import { useTranslation } from "react-i18next"
 
 export const MainPage = () => {
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   return (
     <>
@@ -17,9 +19,9 @@ export const MainPage = () => {
       <section className="bg-[url('/image/hands.png')] bg-opacity-0 pt-[72px] pb-[60px]" >
         <Container >
           <div className="max-w-[1370px] text-center mx-auto text-white">
-            <h2 className="capitalize font-semibold text-[30px] lg:text-[50px] mb-[33px]">the specialized course on gender-centred governance for civil servants</h2>
-            <p className="text-[15px] md:text-[16px] lg:text-[18px] mb-[65px]">The attitude and behavior of state employees should be guided by respect for human rights and the need to safeguard the dignity and rights of citizens.</p>
-            <Button className="!text-primary !bg-[#ffffff] font-semibold" title={"Start course"} onClick={() => navigate('/course')} />
+            <h2 className="capitalize font-semibold text-[30px] lg:text-[50px] mb-[33px]">{t('mainPage.headerTitle')}</h2>
+            <p className="text-[15px] md:text-[16px] lg:text-[18px] mb-[65px]">{t('mainPage.headerDesc')}</p>
+            <Button className="!text-primary !bg-[#ffffff] font-semibold" title={t('mainPage.startCourse')} onClick={() => navigate('/course')} />
           </div>
         </Container >
       </section >
@@ -27,8 +29,8 @@ export const MainPage = () => {
         <Container>
           <div className="flex items-center justify-between flex-col-reverse lg:flex-row flex-wrap gap-x-14 text-center">
             <div className="basis-[100%] lg:basis-[40%]">
-              <p className="italic text-[18px] lg:text-[20px]">“Ensuring gender equality is essential for creating a fair, peaceful, and sustainable world. In Turkmenistan, UNDP remains dedicated to promoting gender equality as a fundamental human right and a critical element of a sustainable future. Collaborating with partners, we strive to empower women by eliminating biases, combating discrimination and stigma, and fostering equal rights and respect for all.”</p>
-              <h4 className="font-semibold text-[20px] lg:text-[22px] max-w-[400px] mx-auto mt-8">Narine Sahakyan<br /> UNDP Resident Representative in Turkmenistan</h4>
+              <p className="italic text-[18px] lg:text-[20px]">{t('mainPage.section1Title')}</p>
+              <h4 className="font-semibold text-[20px] lg:text-[22px] max-w-[400px] mx-auto mt-8">{t('mainPage.section1Desc')}</h4>
             </div>
             <div className="basis-[100%] mb-8 lg:mt-0 lg:basis-[50%]">
               <img className="w-full" src="/image/women-with-undp-logo.png" />
@@ -43,43 +45,43 @@ export const MainPage = () => {
               <img className="w-full" src="/image/progress-section.png" />
             </div>
             <div className="basis-[100%] lg:basis-[40%]">
-              <h4 className="font-semibold text-[20px] lg:text-[22px] text-left">The specialized course on gender-centred governance for civil servants</h4>
+              <h4 className="font-semibold text-[20px] lg:text-[22px] text-left">{t('mainPage.section2Title')}</h4>
               <ProgressLine />
               <div className="space-y-2 mb-8">
                 <div>
-                  <h4 className="font-semibold mb-1">Duration:</h4>
+                  <h4 className="font-semibold mb-1">{t('mainPage.duration')}:</h4>
                   <div className="flex items-center gap-x-2">
                     <Icon type="tick" />
-                    <p>15 hours</p>
+                    <p>15 {t('mainPage.hours')}</p>
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Pace:</h4>
+                  <h4 className="font-semibold mb-1">{t('mainPage.pace')}:</h4>
                   <div className="flex items-center gap-x-2">
                     <Icon type="tick" />
-                    <p>Self paced</p>
+                    <p>{t('mainPage.paceDesc')}</p>
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Certification:</h4>
+                  <h4 className="font-semibold mb-1">{t('mainPage.certificate')}:</h4>
                   <div className="flex items-center gap-x-2">
                     <Icon type="tick" />
-                    <p>Download a certificate of completion</p>
+                    <p>{t('mainPage.getCertificate')}</p>
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">You will learn about:</h4>
+                  <h4 className="font-semibold mb-1">{t('mainPage.youLearn')}:</h4>
                   <div className="space-y-2">
-                    <p>Gender and Gender Equality</p>
-                    <p>Gender Data Turkmenistan</p>
-                    <p>Gender Stereotypes</p>
-                    <p>National Framework</p>
-                    <p>Strategies for achieving Gender Equality</p>
-                    <p>Gender Analysis</p>
+                    <p>{t('mainPage.genderList1')}</p>
+                    <p>{t('mainPage.genderList2')}</p>
+                    <p>{t('mainPage.genderList3')}</p>
+                    <p>{t('mainPage.genderList4')}</p>
+                    <p>{t('mainPage.genderList5')}</p>
+                    <p>{t('mainPage.genderList6')}</p>
                   </div>
                 </div>
               </div>
-              <Button title={"Start course"} />
+              <Button title={t('mainPage.startCourse')} />
             </div>
           </div>
         </Container>

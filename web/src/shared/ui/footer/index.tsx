@@ -3,8 +3,10 @@ import { LuFacebook } from "react-icons/lu"
 import { FaInstagram } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import { AiOutlineYoutube } from "react-icons/ai"
+import { useTranslation } from 'react-i18next'
 
 export const Footer = () => {
+    const { t } = useTranslation()
     return (
         <footer className='py-12 bg-primary'>
             <Container>
@@ -15,7 +17,7 @@ export const Footer = () => {
                                 <a target="_blank"
                                     className="text-dark"
                                     href={"https://www.undp.org/turkmenistan/press-releases/undp-and-partners-enhance-national-capacity-providing-community-based-mental-health-and-psychosocial-support-vulnerable"} >
-                                    The SCGCG course was developed and digitalized within the framework of the project on “Assistance in the realization of the National Action Plan of Turkmenistan in the field of human rights for 2021-2025”.
+                                    {t('mainPage.courseWhy')}
                                 </a>
                             </li>
                         </ul>
@@ -37,7 +39,7 @@ export const Footer = () => {
                         </a>
                     </div>
                     <div className="sm:text-right">
-                        <p className="text-dark">© 2024, All rights reserved</p>
+                        <p className="text-dark">© 2024, {t('mainPage.rightReserved')}</p>
                     </div>
                 </div>
             </Container>

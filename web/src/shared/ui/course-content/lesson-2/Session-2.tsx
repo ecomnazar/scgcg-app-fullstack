@@ -5,108 +5,108 @@ import { FlexWrapper } from '../../flex-wrapper'
 import { NextButton } from '../../button/nextButton'
 import { FadeFromSide } from '../../animation/fadeFromSide'
 import { Image } from '../../image'
+import { useTranslation } from 'react-i18next'
 
 export const Session2 = () => {
+    const { t } = useTranslation()
     const source = '/lessons/day-2/session-1/'
     return (
         <>
-            <MainTitle>Equality</MainTitle>
+            <MainTitle>{t('secondLesson.1')}</MainTitle>
             <FlexWrapper>
                 <FadeFromSide left><Image source={source + '1.png'} /></FadeFromSide>
-                <MainTitle>EQUALITY  Vs DISCRIMINATION</MainTitle>
+                <MainTitle>{t('secondLesson.2')}</MainTitle>
                 <Flex left={<FadeFromSide left><Image source={source + '3.png'} /></FadeFromSide>} right={<div>
-                    <Paragraph>What is  discrimination ?</Paragraph>
-                    <Paragraph>lat. discriminare – to separate,  make a difference </Paragraph>
-                    <Paragraph>"Discriminate", "separate", "make a difference“ , means  impermissible  distinction between people </Paragraph>
-                    <Paragraph>Unequal (less favorable treatment) of individuals and groups, based on their personal characteristics</Paragraph>
+                    <Paragraph>{t('secondLesson.3')}</Paragraph>
+                    <Paragraph>{t('secondLesson.4')}</Paragraph>
+                    <Paragraph>{t('secondLesson.5')}</Paragraph>
+                    <Paragraph>{t('secondLesson.6')}</Paragraph>
                 </div>} />
-                <MainTitle>Identity, uniqe personality</MainTitle>
+                <MainTitle>{t('secondLesson.7')}</MainTitle>
                 <Flex left={<div>
-                    <Paragraph>Identity - what defines us as individuals and makes us unique personalities
-                        Identity is like an onion - each layer represents a part of the identity
-                    </Paragraph>
-                    <Paragraph className='mb-0'>Elements of identity</Paragraph>
+                    <Paragraph>{t('secondLesson.8')}</Paragraph>
+                    <Paragraph className='mb-0'>{t('secondLesson.9')}</Paragraph>
                     <ul>
-                        <li>1. Elements of identity </li>
-                        <li>2. The influence of eenvironment - citizenship, place of residence, gender role... </li>
-                        <li>3. Own choices - marital and family status, political conviction, union membership...</li>
+                        <li>1. {t('secondLesson.10')}</li>
+                        <li>2. {t('secondLesson.11')} </li>
+                        <li>3. {t('secondLesson.12')}</li>
                     </ul>
-                    <Paragraph>Changeable and unchangeable parts of identity. Each person is a complex, unique and irreplaceable individual.</Paragraph>
+                    <Paragraph>{t('secondLesson.13')}</Paragraph>
                 </div>} right={<FadeFromSide><Image source={source + '4.png'} /></FadeFromSide>} />
-                <MainTitle> What drive discrimination?</MainTitle>
+                <MainTitle>{t('secondLesson.14')}</MainTitle>
                 <FadeFromSide><Image source={source + '5.png'} /></FadeFromSide>
-                <MainTitle>Gender stereotypes</MainTitle>
+                <MainTitle>{t('secondLesson.15')}</MainTitle>
                 <Flex left={<FadeFromSide left><Image source={source + '6.png'} /></FadeFromSide>} right={<FadeFromSide><Image source={source + '7.png'} /></FadeFromSide>} />
-                <MainTitle>Stereotypes:</MainTitle>
+                <MainTitle>{t('secondLesson.16')}</MainTitle>
                 <Flex left={<ul>
-                    <Paragraph>1. perpetuate inequality</Paragraph>
-                    <Paragraph>2. maintain gender roles</Paragraph>
-                    <Paragraph>3. reduce the understanding of the concept of human rights</Paragraph>
-                    <Paragraph>4. It is not easy to recognize or reduce them</Paragraph>
+                    <Paragraph>1. {t('secondLesson.17')}</Paragraph>
+                    <Paragraph>2. {t('secondLesson.18')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.19')}</Paragraph>
+                    <Paragraph>4. {t('secondLesson.20')}</Paragraph>
                 </ul>} right={<FadeFromSide><Image source={source + '8.png'} /></FadeFromSide>} />
-                <MainTitle>Prejudices</MainTitle>
+                <MainTitle>{t('secondLesson.21')}</MainTitle>
                 <Flex left={<div>
-                    <Paragraph>Prejudice - a hostile or negative attitude towards a recognizable group of people, which is based solely on their belonging to that group </Paragraph>
-                    <Paragraph>Praejudicium - prae (in advance) and judicium (to judge) - judging in advance </Paragraph>
-                    <Paragraph>A preconceived opinion not based on any reasonable ground or actual state of affairs</Paragraph>
+                    <Paragraph>{t('secondLesson.22')}</Paragraph>
+                    <Paragraph>{t('secondLesson.23')}</Paragraph>
+                    <Paragraph>{t('secondLesson.24')}</Paragraph>
                 </div>} right={<FadeFromSide><Image source={source + '9.png'} /></FadeFromSide>} />
-                <MainTitle>Prejudices, emotional  part</MainTitle>
-                <Paragraph>People with prejudices direct their prejudices towards members of the group as a whole, ignoring the personal characteristics that make these people different from each other.</Paragraph>
-                <Paragraph>1. Negative feeling, discomfort, fear ...</Paragraph>
-                <Paragraph>2. They make us to  interpret other people and situations as threatening to ourselves.</Paragraph>
-                <Paragraph>3. We act like we have  to protect ourselves, which leads to discriminatory behevior.</Paragraph>
-                <MainTitle>Causes of sterotypes and prejudice</MainTitle>
+                <MainTitle>{t('secondLesson.25')}</MainTitle>
+                <Paragraph>{t('secondLesson.26')}</Paragraph>
+                <Paragraph>1. {t('secondLesson.27')}</Paragraph>
+                <Paragraph>2. {t('secondLesson.28')}</Paragraph>
+                <Paragraph>3. {t('secondLesson.29')}</Paragraph>
+                <MainTitle>{t('secondLesson.30')}</MainTitle>
                 <Flex left={<FadeFromSide left><Image source={source + '10.png'} /></FadeFromSide>} right={<div>
-                    <Paragraph>1. Thinking processes</Paragraph>
-                    <Paragraph>2. Biases towards own and other groups</Paragraph>
-                    <Paragraph>3. Conformism</Paragraph>
-                    <Paragraph>4. Allocation of resources</Paragraph>
+                    <Paragraph>1. {t('secondLesson.31')}</Paragraph>
+                    <Paragraph>2. {t('secondLesson.32')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.33')}</Paragraph>
+                    <Paragraph>4. {t('secondLesson.34')}</Paragraph>
                 </div>} />
-                <MainTitle>Thinking processes</MainTitle>
+                <MainTitle>{t('secondLesson.35')}</MainTitle>
                 <Flex left={<FadeFromSide left><Image source={source + '11.png'} /></FadeFromSide>} right={<div>
-                    <Paragraph>1. Stereotypes and prejudice – accompanying process of interpretaion of information</Paragraph>
-                    <Paragraph>2. Large amount of information</Paragraph>
-                    <Paragraph>3. Limited cognitive capacity</Paragraph>
-                    <Paragraph>4. Social categorization (we and them)</Paragraph>
+                    <Paragraph>1. {t('secondLesson.36')}</Paragraph>
+                    <Paragraph>2. {t('secondLesson.37')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.38')}</Paragraph>
+                    <Paragraph>4. {t('secondLesson.39')}</Paragraph>
                 </div>} />
-                <MainTitle>Social categorization “US and Them"</MainTitle>
+                <MainTitle>{t('secondLesson.40')}</MainTitle>
                 <Flex left={<FadeFromSide left><Image source={source + '12.png'} /></FadeFromSide>} right={<div>
-                    <Paragraph>1. We put information about group members into categories </Paragraph>
-                    <Paragraph>2. We reduce the differences between the members of those groups </Paragraph>
-                    <Paragraph>3. And overestimate the differences between the groups</Paragraph>
+                    <Paragraph>1. {t('secondLesson.41')}</Paragraph>
+                    <Paragraph>2. {t('secondLesson.42')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.43')}</Paragraph>
                 </div>} />
-                <MainTitle>Conformity</MainTitle>
+                <MainTitle>{t('secondLesson.44')}</MainTitle>
                 <Flex left={<div>
-                    <Paragraph>1. Compliance with social norms For our society, a certain belief is common</Paragraph>
-                    <Paragraph>2. Throughout our childhood, we adopted beliefs through socialization processes - for example. our parents passed on to us stereotypes about women and men</Paragraph>
-                    <Paragraph>3.  If we want to meet the expectations of the group and get approval from the group - we behave in accordance with social norms</Paragraph>
+                    <Paragraph>1. {t('secondLesson.45')}</Paragraph>
+                    <Paragraph>2. {t('secondLesson.46')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.47')}</Paragraph>
                 </div>} right={<FadeFromSide><Image source={source + '13.png'} /></FadeFromSide>} />
-                <MainTitle>Allocation of  resources</MainTitle>
+                <MainTitle>{t('secondLesson.48')}</MainTitle>
                 <Flex left={<div>
-                    <Paragraph>1. Bidding for gaining a greater share of limited resources</Paragraph>
-                    <Paragraph>2. Political position</Paragraph>
-                    <Paragraph>3. Social power</Paragraph>
-                    <Paragraph>3. Achieving a goal</Paragraph>
-                    <Paragraph>3. Scarce resources have been found to lead to conflict between groups and result in increased prejudice and discrimination</Paragraph>
+                    <Paragraph>1. {t('secondLesson.49')}</Paragraph>
+                    <Paragraph>2. {t('secondLesson.50')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.51')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.52')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.53')}</Paragraph>
                 </div>} right={<FadeFromSide><Image source={source + '14.png'} /></FadeFromSide>} />
-                <MainTitle> What drive discrimination?</MainTitle>
+                <MainTitle>{t('secondLesson.54')}</MainTitle>
                 <FadeFromSide left><Image source={source + '15.png'} /></FadeFromSide>
-                <MainTitle>The consequences of stereotypes and prejudices</MainTitle>
+                <MainTitle>{t('secondLesson.55')}</MainTitle>
                 <Flex left={<FadeFromSide left><Image source={source + '16.png'} /></FadeFromSide>} right={<div>
-                    <Paragraph>1. We rationalize discrimination</Paragraph>
-                    <Paragraph>2. We are spinning in a vicious circle of self-fulfilling prophecy </Paragraph>
-                    <Paragraph>3. Members of groups that are the target of stereotypes have lowered self-esteem and lower sense of self-efficacy </Paragraph>
-                    <Paragraph>4. Weaker mental health</Paragraph>
-                    <Paragraph>5. Less work efficiency, more absenteeism, more resignations, less promotion </Paragraph>
-                    <Paragraph>6. We unconsciously confirm stereotypes</Paragraph>
-                    <Paragraph>7. Stigmatization and marginalization</Paragraph>
+                    <Paragraph>1. {t('secondLesson.56')}</Paragraph>
+                    <Paragraph>2. {t('secondLesson.57')}</Paragraph>
+                    <Paragraph>3. {t('secondLesson.58')}</Paragraph>
+                    <Paragraph>4. {t('secondLesson.59')}</Paragraph>
+                    <Paragraph>5. {t('secondLesson.60')}</Paragraph>
+                    <Paragraph>6. {t('secondLesson.61')}</Paragraph>
+                    <Paragraph>7. {t('secondLesson.62')}</Paragraph>
                 </div>} />
-                <MainTitle>Modern prejudices</MainTitle>
-                <Paragraph>Due to the insistence on political correctness, most people avoid clearly expressing their stereotypes and prejudices, but when we ask more subtle questions, we recognize  the so-called modern prejudices</Paragraph>
-                <Paragraph>1. The discrimination against a certain group is denied</Paragraph>
-                <Paragraph>2. The group  claim too many rights</Paragraph>
-                <Paragraph>3. The state pays too much attention to their rights</Paragraph>
-                <Paragraph>4. The attitude that  existing state of society should be maintained</Paragraph>
+                <MainTitle>{t('secondLesson.63')}</MainTitle>
+                <Paragraph>{t('secondLesson.64')}</Paragraph>
+                <Paragraph>1. {t('secondLesson.65')}</Paragraph>
+                <Paragraph>2. {t('secondLesson.66')}</Paragraph>
+                <Paragraph>3. {t('secondLesson.67')}</Paragraph>
+                <Paragraph>4. {t('secondLesson.68')}</Paragraph>
                 <NextButton />
             </FlexWrapper>
         </>
