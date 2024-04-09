@@ -5,7 +5,10 @@ import { Icon } from '../icon'
 import { languages } from '@/shared/lib/constants/languages'
 
 export const LanguageSelector = () => {
-    const onChangeLanguage = (lang: string) => i18next.changeLanguage(lang)
+    const onChangeLanguage = (lang: string) => {
+        i18next.changeLanguage(lang)
+        localStorage.setItem('i18nextLng', lang)
+    }
     const [selected, setSelected] = React.useState(languages[0])
     return (
         <Listbox value={selected} onChange={setSelected}>

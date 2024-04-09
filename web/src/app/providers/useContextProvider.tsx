@@ -22,7 +22,7 @@ export const UseContextProvider: React.FC<Props> = ({ children }) => {
     const [activeCourse, setActiveCourse] = React.useState([0, 0])
     const { i18n } = useTranslation()
 
-    const lngFromLS = localStorage.getItem('lng') || 'en'
+    const lngFromLS = localStorage.getItem('i18nextLng') || 'en'
 
     React.useEffect(() => {
         i18n.changeLanguage(lngFromLS)

@@ -7,9 +7,11 @@ import { MobileMenu } from './mobile-menu'
 import { LogoutConfirmModal } from '../modal/logout-confirm-modal'
 import { BaseContext } from '@/app/providers/useContextProvider'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export const Navbar = () => {
     const { logoutModal, setLogoutModal } = React.useContext(BaseContext)
+    const { t } = useTranslation()
     return (
         <section>
             <Container>
@@ -20,7 +22,7 @@ export const Navbar = () => {
                         <img className="w-[28px] md:w-[40px]" src="/logo/undp-logo.svg" />
                     </Link>
                     <div className="items-center gap-x-6 hidden md:flex">
-                        <Button title={"View course"} />
+                        <Button title={t('mainPage.view')} />
                         <LanguageSelector />
                         <ProfileMenu />
                     </div >
