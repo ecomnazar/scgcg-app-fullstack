@@ -1,6 +1,5 @@
 import { MainTitle } from '../../main-title'
 import { Paragraph } from '../../paragraph'
-import { FadeIn } from '../../animation/fadeIn'
 import { Flex } from '../../flex'
 import { FlexWrapper } from '../../flex-wrapper'
 import { NextButton } from '../../button/nextButton'
