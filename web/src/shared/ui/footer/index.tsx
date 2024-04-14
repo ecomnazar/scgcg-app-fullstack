@@ -26,16 +26,16 @@ export const Footer = () => {
                 <div className="grid grid-col-1 mt-12 gap-y-4 sm:grid-cols-2">
                     <div className="flex items-center gap-x-4">
                         <a target="_blank" href="https://www.facebook.com/undptm/">
-                            <LuFacebook size={26} />
+                            <LuFacebook color='white' size={26} />
                         </a>
                         <a target="_blank" href="https://www.instagram.com/undp_turkmenistan">
-                            <FaInstagram size={25} />
+                            <FaInstagram color='white' size={25} />
                         </a>
                         <a target="_blank" href="https://twitter.com/undptm">
-                            <FaXTwitter size={23} />
+                            <FaXTwitter color='white' size={23} />
                         </a>
                         <a target="_blank" href="https://www.youtube.com/@undpinturkmenistan6160">
-                            <AiOutlineYoutube size={28} />
+                            <AiOutlineYoutube color='white' size={28} />
                         </a>
                     </div>
                     <div className="sm:text-right">

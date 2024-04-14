@@ -1,11 +1,13 @@
 import { IoMdClose } from "react-icons/io";
 import { CourseTitle } from './Course';
+import { useTranslation } from "react-i18next";
 
 export const CourseSelectorBar = () => {
+    const { t } = useTranslation()
     return (
         <>
             <div className='px-4 border py-4 flex bg-white items-center justify-between'>
-                <h4>Course materials</h4>
+                <h4>{t('courseMaterials')}</h4>
                 <button><IoMdClose size={21} /></button>
             </div>
             <div>
@@ -20,32 +22,32 @@ export const CourseSelectorBar = () => {
 
 const courses = [
     {
-        courseTitle: 'Introduction',
-        subCourses: ['Welcoming session and introduction to on line course']
+        courseTitle: 'introduction',
+        subCourses: ['viewCourse.text1']
     },
     {
         courseTitle: 'LESSON 1',
-        subCourses: ['Gender, gender norms  and gender equality', 'Test']
+        subCourses: ['viewCourse.text2', 'test']
     },
     {
         courseTitle: 'LESSON 2',
-        subCourses: ['Gender, gender norms  and gender equality', 'Test']
+        subCourses: ['viewCourse.text3', 'test']
     },
     {
         courseTitle: 'LESSON 3',
-        subCourses: ['Gender, gender norms  and gender equality', 'Test']
+        subCourses: ['viewCourse.text4', 'test']
     },
     {
         courseTitle: 'LESSON 4',
-        subCourses: ['Gender, gender norms  and gender equality', 'Test']
+        subCourses: ['viewCourse.text5', 'test']
     },
     {
         courseTitle: 'LESSON 5',
-        subCourses: ['Gender, gender norms  and gender equality', 'Test']
+        subCourses: ['viewCourse.text6', 'test']
     },
     {
         courseTitle: 'LESSON 6',
-        subCourses: ['Gender, gender norms  and gender equality', 'Test']
+        subCourses: ['viewCourse.text7', 'test']
     },
     // {
     //     courseTitle: 'Welcoming session and introduction to on line course',

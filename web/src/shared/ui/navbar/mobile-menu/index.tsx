@@ -63,15 +63,15 @@ export const MobileMenu = () => {
                         </button>
                         {token ? <>
                             <button onClick={() => { }} className="bg-[#EDEDED] p-4 rounded-md flex items-center justify-between">
-                                <p>Profile</p>
+                                <p>{t('profile')}</p>
                                 <Icon type='arrow-right' />
                             </button>
                             <button onClick={handleLogout} className="bg-[#EDEDED] p-4 rounded-md flex items-center justify-between">
-                                <p>Logout</p>
+                                <p>{t('signout')}</p>
                                 <Icon type='arrow-right' />
                             </button>
                         </> : <button onClick={handleRegister} className="bg-[#EDEDED] p-4 rounded-md flex items-center justify-between">
-                            <p>Register</p>
+                            <p>{t('signin')}</p>
                             <Icon type='arrow-right' />
                         </button>}
                     </div>

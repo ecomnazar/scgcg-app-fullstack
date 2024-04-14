@@ -10,6 +10,7 @@ import { countries } from '@/shared/lib/constants/countries';
 import { genders } from '@/shared/lib/constants/genders';
 import { regions } from '@/shared/lib/constants/regions';
 import { useTranslation } from 'react-i18next';
+import { AxiosError } from 'axios';
 
 interface FormProps {
     fullname: string;
@@ -32,7 +33,7 @@ export const SignUpForm: React.FC<Props> = ({ setAuthectionType }) => {
     const dateInputRef = React.useRef<HTMLInputElement>(null)
     const { t } = useTranslation()
 
-    const onSubmit: SubmitHandler<FormProps> = async ({ fullname, email, password }) => {
+    const onSubmit: SubmitHandler<FormProps> = async ({ fullname, email, password, birthday }) => {
         if (selectedCountry === 'Turkmenistan' && !selectedRegion) {
             toast.error(t('selectRegion'))
             return
@@ -51,7 +52,8 @@ export const SignUpForm: React.FC<Props> = ({ setAuthectionType }) => {
             email,
             password,
             region: selectedCountry === 'Turkmenistan' ? selectedRegion : selectedCountry,
-            gender: selectedGender
+            gender: selectedGender,
+            birthday: birthday || null
         }
         await signupApi(data)
             .then(() => {
@@ -59,7 +61,12 @@ export const SignUpForm: React.FC<Props> = ({ setAuthectionType }) => {
                 toast.success(t('successfullyRegistered'))
             })
             .finally(() => setLoading(false))
-            .catch(() => console.log('error'))
+            .catch((e: AxiosError) => {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                //@ts-expect-error
+                const err = e.response?.data.message
+                toast.error(t(err))
+            })
     }
 
     return (
@@ -71,7 +78,7 @@ export const SignUpForm: React.FC<Props> = ({ setAuthectionType }) => {
             <input ref={dateInputRef} className='absolute invisible' type='date' onChange={(e) => setValue('birthday', e.target.value)} />
             <Select content={countries} defaultValue={t('selectCountry')} selected={selectedCountry} setSelected={setSelectedCountry} />
             {selectedCountry === 'Turkmenistan' && <Select content={regions} defaultValue={t('selectRegion')} selected={selectedRegion} setSelected={setSelectedRegion} />}
-            <Select content={genders} defaultValue={t('selectGender')} selected={selectedGender} setSelected={setSelectedGender} />
+            <Select content={genders} defaultValue={t('selectGender')} selected={t(selectedGender)} setSelected={setSelectedGender} />
             <Button title={t('signup')} type={'submit'} size='small' className='w-full' loading={loading} />
             <p className='text-[13px] text-center'>{t('alreadyHaveAnAccount')} <button onClick={() => setAuthectionType('signin')} className='text-primary'>{t('signin')}</button></p>
         </form>

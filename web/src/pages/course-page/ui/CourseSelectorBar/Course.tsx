@@ -3,6 +3,7 @@ import { BaseContext } from '@/app/providers/useContextProvider';
 import { getActiveCourse } from '@/shared/lib/localStorage';
 import React, { useContext } from 'react'
 import { IoIosArrowForward } from "react-icons/io";
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   item: {
@@ -16,6 +17,7 @@ export const CourseTitle: React.FC<Props> = ({ item, index }) => {
   const { activeCourse, setActiveCourse } = useContext(BaseContext)
   const activeCourseLS = getActiveCourse()
   const [isOpen, setIsOpen] = React.useState(false)
+  const { t } = useTranslation()
 
   const handleClick = (idx: number) => {
     setActiveCourse([index, idx])
@@ -23,7 +25,7 @@ export const CourseTitle: React.FC<Props> = ({ item, index }) => {
 
   return <div className='cursor-default px-4 border-b border-t bg-[#f7f9fa]'>
     <div onClick={() => setIsOpen((prev) => !prev)} className='py-3 cursor-pointer flex items-center justify-between space-x-6'>
-      <h3>{item.courseTitle}</h3>
+      <h3>{index === 0 ? t('introduction.introduction') : `${t('lesson')} ${index}`}</h3>
       <button><IoIosArrowForward size={20} /></button>
     </div>
     <div>
@@ -38,7 +40,7 @@ export const CourseTitle: React.FC<Props> = ({ item, index }) => {
               // 'pointer-events-none': themeIndex !== activeCourse[0]
             })} />
           </div>
-          <h4 className='text-[15px] w-[90%]'>{sub}</h4>
+          <h4 className='text-[15px] w-[90%]'>{t(sub)}</h4>
         </div>
       })}
     </div>

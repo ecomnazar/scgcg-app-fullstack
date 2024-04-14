@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react'
 import { Icon } from '../icon';
 import { useOutsideClick } from '@/shared/lib/hooks/useOutsideClick';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     content: string[]
@@ -13,6 +14,7 @@ interface Props {
 export const Select: React.FC<Props> = ({ content, selected, setSelected, defaultValue }) => {
     const ulRef = useOutsideClick(() => { })
     const [showAll, setShowAll] = React.useState(false)
+    const { t } = useTranslation()
 
     const onSelect = (item: string) => {
         setShowAll(false)
@@ -36,8 +38,8 @@ export const Select: React.FC<Props> = ({ content, selected, setSelected, defaul
             {showAll &&
                 <div ref={ulRef} className='rounded-[8px] bg-white max-h-[200px] overflow-auto border border-[#D0D5DD] p-[8px] text-[14px] mt-2'>
                     <ul>
-                        {content.map((country, idx) => {
-                            return <li onClick={() => onSelect(country)} key={idx} className='hover:bg-primary-50 hover:text-primary p-3 cursor-pointer rounded-[6px]'>{country}</li>
+                        {content.map((item, idx) => {
+                            return <li onClick={() => onSelect(item)} key={idx} className='hover:bg-primary-50 hover:text-primary p-3 cursor-pointer rounded-[6px]'>{t(item)}</li>
                         })}
                     </ul>
                 </div>

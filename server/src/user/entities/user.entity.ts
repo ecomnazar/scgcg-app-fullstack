@@ -24,6 +24,9 @@ export class User {
   region: string;
 
   @Column()
+  birthday: string;
+
+  @Column()
   gender: string;
 
   @CreateDateColumn()

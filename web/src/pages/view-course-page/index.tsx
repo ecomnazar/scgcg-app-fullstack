@@ -5,8 +5,8 @@ import { Icon } from '@/shared/ui/icon'
 import { Navbar } from '@/shared/ui/navbar'
 import { useTranslation } from 'react-i18next'
 
-const materials = ['Introduction', 'Gender, gender norms and gender quality', 'Gender stereotypes', 'Strategies and Gender mainstreaming', 'International obligation national framework', 'Gender data', 'Gender analysis']
-const presentations = ['Gender, gender norms and gender equality', 'Gender stereotypes and prejudies', 'Strategies for achieving gender equality and gender mainstreaming', 'International obligation and national framework', 'Gender data', 'Gender analysis']
+const materials = ['text1', 'text2', 'text3', 'text4', 'text5', 'text6', 'text7']
+const presentations = ['presentation1', 'presentation2', 'presentation3', 'presentation4', 'presentation5', 'presentation6']
 
 export const ViewCoursePage = () => {
     const { t, i18n } = useTranslation()
@@ -51,7 +51,7 @@ export const ViewCoursePage = () => {
                             return <button onClick={() => fileDownloader(`/files/${currentLanguage}/text/${idx + 1}.docx`, `${material}.docx`)} key={idx} className='flex items-center space-x-4 cursor-pointer'>
                                 <Icon type='upload' />
                                 <div className='text-left'>
-                                    <p className='font-semibold text-dark'>{material}</p>
+                                    <p className='font-semibold text-dark'>{t(`viewCourse.${material}`)}</p>
                                     <p className='text-dark text-[12px] -translate-y-[2px]'>{t('downloadFile')}</p>
                                 </div>
                             </button>
@@ -63,7 +63,7 @@ export const ViewCoursePage = () => {
                             return <button onClick={() => fileDownloader(`/files/${currentLanguage}/presentation/${idx + 1}.${idx === 0 || idx === 1 ? 'pptx' : 'pptm'}`, `${presentation}.${idx === 0 || idx === 1 ? 'pptx' : 'pptm'}`)} key={idx} className='flex items-center space-x-4 cursor-pointer'>
                                 <Icon type='upload' />
                                 <div className='text-left'>
-                                    <p className='font-semibold text-dark'>{presentation}</p>
+                                    <p className='font-semibold text-dark'>{t(`viewCourse.${presentation}`)}</p>
                                     <p className='text-dark text-[12px] -translate-y-[2px]'>{t('downloadFile')}</p>
                                 </div>
                             </button>

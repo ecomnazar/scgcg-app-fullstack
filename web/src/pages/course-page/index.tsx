@@ -21,7 +21,6 @@ export const CoursePage = () => {
         })
     }, [activeCourse])
 
-
     return (
         <div className='pb-8'>
             <Navbar />

@@ -21,7 +21,7 @@ export class UserService {
       where: { email: createUserDto.email },
     });
     if (existUser) {
-      throw new BadRequestException('User already exists');
+      throw new BadRequestException('userAlreadyExists');
     }
 
     const user = await this.userRepository.save({
@@ -30,6 +30,7 @@ export class UserService {
       password: await argon2.hash(createUserDto.password),
       region: createUserDto.region,
       gender: createUserDto.gender,
+      birthday: createUserDto.birthday,
     });
     const token = this.jwtService.sign({ email: createUserDto.email });
     return { user, token };

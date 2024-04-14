@@ -1,6 +1,5 @@
 import axios, { AxiosError } from "axios";
 import { getAccessToken } from "../lib/token";
-import toast from "react-hot-toast";
 
 export const instance = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
@@ -29,8 +28,6 @@ instance.interceptors.response.use(
   (error: AxiosError) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
-    const err = error.response?.data.message;
-    toast.error(err);
     return Promise.reject(error);
   }
 );
