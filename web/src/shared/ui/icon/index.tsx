@@ -14,7 +14,8 @@ const icons = {
     'person': 'person-icon.svg',
     'signout': 'signout-icon.svg',
     'tick': 'tick-icon.svg',
-    'menu': 'menu-icon.svg'
+    'menu': 'menu-icon.svg',
+    'upload': 'upload-icon.svg'
 }
 
 interface Props {

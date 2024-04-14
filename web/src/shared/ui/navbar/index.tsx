@@ -1,17 +1,14 @@
-import React from 'react'
 import { Container } from '../container'
 import { Button } from '../button'
 import { LanguageSelector } from '../language-selector'
 import { ProfileMenu } from '../profile-menu'
 import { MobileMenu } from './mobile-menu'
-import { LogoutConfirmModal } from '../modal/logout-confirm-modal'
-import { BaseContext } from '@/app/providers/useContextProvider'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export const Navbar = () => {
-    const { logoutModal, setLogoutModal } = React.useContext(BaseContext)
     const { t } = useTranslation()
+    const navigate = useNavigate()
     return (
         <section>
             <Container>
@@ -22,14 +19,13 @@ export const Navbar = () => {
                         <img className="w-[28px] md:w-[40px]" src="/logo/undp-logo.svg" />
                     </Link>
                     <div className="items-center gap-x-6 hidden md:flex">
-                        <Button title={t('mainPage.view')} />
+                        <Button onClick={() => navigate('/view')} title={t('mainPage.view')} />
                         <LanguageSelector />
                         <ProfileMenu />
                     </div >
                     <MobileMenu />
                 </nav >
             </Container >
-            <LogoutConfirmModal isOpen={logoutModal} setIsOpen={setLogoutModal} />
         </section>
     )
 }

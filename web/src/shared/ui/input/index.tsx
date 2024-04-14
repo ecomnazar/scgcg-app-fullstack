@@ -9,7 +9,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
     placeholder?: string;
     error?: FieldError;
     register?: UseFormRegisterReturn<string>;
-    type?: 'text' | 'password';
+    type?: 'text' | 'password' | 'date';
 }
 
 export const Input: React.FC<Props> = ({ className, placeholder, error, register, type = 'text', ...props }) => {

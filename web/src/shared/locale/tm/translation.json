@@ -1,6 +1,17 @@
 {
     "translation": {
         "title": "English",
+        "downloadFile": "Faýly ýüklemek",
+        "areYouSureSignout": "Siz çykmak isleýärsiňizmi?",
+        "cancel": "Ýok",
+        "yes": "Hawa",
+        "signoutSuccessfully": "Siz üstünlikli çykdyňyz",
+        "successfullyFinishedCourseGetCertificate": "Siz kursy üstünlikli tamamladyňyz, sertifikatyňyzy alyp bilersiňiz",
+        "yourFullname": "Siziň doly adyňyz",
+        "yourEmail": "Siziň e-poçtaňyz",
+        "submit": "Iber",
+        "displayInCertificate": "sertifikatda görüner",
+        "pleaseCheckYourMail": "E-poçtaňyzy barlaň",
         "introduction": {
             "introduction": "Giriş",
             "UNDP": "BMG ÖM Türkmenistan",
@@ -12,7 +23,11 @@
             "6": "Emma, deňlige ýetmek aňsat wezipe däldir, ol bütin jemgyýetiň, esasanam döwlet institutlarynyň, bu meselede doly ygrarlylygyny talap edýär.",
             "7": "Şonuň üçin bu okuw sapaklary döwlet gylykçylary üçin niýetlenilen – olara gender deňligine ýetmekde öz ornuny düşünmäge we bu ugurda öz bilimlerini ýokarlandyrmaga mümkinçilik berer.",
             "8": "Okuw sapaklary öz içine alty sapagy alýar. Her sapak düşünjeleriň kesgitlemesini, mysallary we sapaklary suratlandyrýan ýa-da goşmaça düşündirýän gysga wideo şekillendirmeleri öz içine alýar. Her sapagyň ahyrynda siziň bilimleri alanyňyzy görkezmek üçin geçmeli barlag soragnamasy bar.",
-            "9": "Onlaýn okuw sapaklary tamamlanyňyzdan soň siz sertifikat/şahadatnama alarsyňyz."
+            "9": "Onlaýn okuw sapaklary tamamlanyňyzdan soň siz sertifikat/şahadatnama alarsyňyz.",
+            "listTitle": "Şu onlaýn okuw sapaklarynyň takyk maksatlary şulardan ybarat:",
+            "list1": "Döwlet gullukçylaryň gender deňliginiň konsepsiýalary we halkara standartlary barada öz bilimlerini we düşünjelerinigowulandyrar;",
+            "list2": "Döwlet gullukçylaryň döwlet syýasatynda gender meselelerini hemmetaraplaýyn hasaba almak hakynda bilimlarini ýokarlandyrar;",
+            "list3": "Gatnaşyjylary gender meselesiniň guraly hökmünde gender seljermesi bilen tanyşdyrar."
         },
         "mainPage": {
             "headerTitle": "Döwlet gullukçylary üçin gendere gönükdirilen dolandyryş boýunça ýöriteleşdirilen okuw",

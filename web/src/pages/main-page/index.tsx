@@ -1,27 +1,36 @@
 import { Icon } from "@/shared/ui/icon"
 import { Container } from "@/shared/ui/container"
 import { Button } from "@/shared/ui/button"
-import { AuthModal } from "@/shared/ui/modal/auth-modal"
 import { Footer } from "@/shared/ui/footer"
 import { Navbar } from "@/shared/ui/navbar"
 import { useNavigate } from "react-router-dom"
 import { ProgressLine } from "@/shared/ui/progress-line"
 import { useTranslation } from "react-i18next"
+import { getAccessToken } from "@/shared/lib/token"
+import React from "react"
+import { BaseContext } from "@/app/providers/useContextProvider"
 
 export const MainPage = () => {
   const navigate = useNavigate()
   const { t } = useTranslation()
+  const token = getAccessToken()
+  const { setAuthModal } = React.useContext(BaseContext)
 
   return (
     <>
-      <AuthModal />
       <Navbar />
       <section className="bg-[url('/image/hands.png')] bg-opacity-0 pt-[72px] pb-[60px]" >
         <Container >
           <div className="max-w-[1370px] text-center mx-auto text-white">
             <h2 className="capitalize font-semibold text-[30px] lg:text-[50px] mb-[33px]">{t('mainPage.headerTitle')}</h2>
             <p className="text-[15px] md:text-[16px] lg:text-[18px] mb-[65px]">{t('mainPage.headerDesc')}</p>
-            <Button className="!text-primary !bg-[#ffffff] font-semibold" title={t('mainPage.startCourse')} onClick={() => navigate('/course')} />
+            <Button className="!text-primary !bg-[#ffffff] font-semibold" title={t('mainPage.startCourse')} onClick={() => {
+              if (token) {
+                navigate('/course')
+              } else {
+                setAuthModal(true)
+              }
+            }} />
           </div>
         </Container >
       </section >
@@ -81,7 +90,13 @@ export const MainPage = () => {
                   </div>
                 </div>
               </div>
-              <Button title={t('mainPage.startCourse')} />
+              <Button onClick={() => {
+                if (token) {
+                  navigate('/course')
+                } else {
+                  setAuthModal(true)
+                }
+              }} title={t('mainPage.startCourse')} />
             </div>
           </div>
         </Container>

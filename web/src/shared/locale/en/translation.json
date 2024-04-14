@@ -1,6 +1,17 @@
 {
     "translation": {
         "title": "English",
+        "downloadFile": "Download file",
+        "areYouSureSignout": "Are you sure you want to sign out?",
+        "cancel": "Cancel",
+        "yes": "Yes",
+        "signoutSuccessfully": "You have successfully signed out",
+        "successfullyFinishedCourseGetCertificate": "You are succesfully completed course, get your certificate",
+        "yourFullname": "Your fullname",
+        "yourEmail": "Your email",
+        "submit": "Submit",
+        "displayInCertificate": "will be displayed in the certificate",
+        "pleaseCheckYourMail": "Please check your mail",
         "mainPage": {
             "headerTitle": "The Specialized Course On Gender-Centreda Governance For Civil Servants",
             "headerDesc": "The attitude and behavior of state employees should be guided by respect for human rights and the need to safeguard the dignity and rights of citizens.",
@@ -38,7 +49,11 @@
             "6": "However, achieving equality is not an easy task, and requires the full commitment of the entire society, especially the institutions of the government.",
             "7": "That is why this course is intended for civil servants in order to enable them to understand their role in achieving gender equality and improve their knowledge in this area.",
             "8": "The course is organized through six lessons. Each lesson offers definitions of terms, examples, and short videos that illustrate or further explain the lesson. At the end of each lesson there is a short test that you need to complete to show that you have mastered the knowledge.",
-            "9": "After completing the course, you will receive a certificate."
+            "9": "After completing the course, you will receive a certificate.",
+            "listTitle": "Specific goals of this on-line course are:",
+            "list1": "To improve knowledge of civil servants and understanding of gender equality concepts and international standards;",
+            "list2": "To improve knowledge of civil servants about gender mainstreaming of public policies;",
+            "list3": "To introduce participant with gender analysis as a tool for gender mainstreaming."
         },
         "form": {
             "signup": "Sign up",

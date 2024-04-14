@@ -15,7 +15,7 @@ export const Footer = () => {
                         <ul className="mt-4 flex flex-col gap-y-2">
                             <li>
                                 <a target="_blank"
-                                    className="text-dark"
+                                    className="text-white"
                                     href={"https://www.undp.org/turkmenistan/press-releases/undp-and-partners-enhance-national-capacity-providing-community-based-mental-health-and-psychosocial-support-vulnerable"} >
                                     {t('mainPage.courseWhy')}
                                 </a>
@@ -39,7 +39,7 @@ export const Footer = () => {
                         </a>
                     </div>
                     <div className="sm:text-right">
-                        <p className="text-dark">© 2024, {t('mainPage.rightReserved')}</p>
+                        <p className="text-white">© 2024, {t('mainPage.rightReserved')}</p>
                     </div>
                 </div>
             </Container>
