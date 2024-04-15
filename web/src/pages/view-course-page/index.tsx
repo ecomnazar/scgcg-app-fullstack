@@ -46,8 +46,6 @@ export const ViewCoursePage = () => {
                     <h3 className='font-semibold text-[22px] text-dark'>{t('mainPage.materials')}</h3>
                     <div className='space-y-4'>
                         {materials.map((material, idx) => {
-                            console.log(idx + 1);
-
                             return <button onClick={() => fileDownloader(`/files/${currentLanguage}/text/${idx + 1}.docx`, `${material}.docx`)} key={idx} className='flex items-center space-x-4 cursor-pointer'>
                                 <Icon type='upload' />
                                 <div className='text-left'>

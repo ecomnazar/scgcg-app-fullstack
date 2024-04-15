@@ -11,6 +11,7 @@ export const Session1 = () => {
   return (
     <>
       <MainTitle>{t('firstLesson.1')}</MainTitle>
+      <audio src='/sounds/en/lesson-1/1.wav' controls />
       <FlexWrapper>
         <Flex
           left={
@@ -44,6 +45,8 @@ export const Session1 = () => {
           <img className='rounded-[8px]' src='/lessons/day-1/session-1/4.png' />
         </FadeFromSide>
         <MainTitle>{t('firstLesson.6')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/2.wav' controls />
+
         <Flex
           left={
             <div className='space-y-4'>
@@ -70,6 +73,8 @@ export const Session1 = () => {
         <Paragraph>{t('firstLesson.15')}</Paragraph>
         <Paragraph>{t('firstLesson.16')}</Paragraph>
         <MainTitle>{t('firstLesson.17')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/3.wav' controls />
+
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/6.png' /></FadeFromSide>} right={<Paragraph>{t('firstLesson.18')}</Paragraph>} />
         <MainTitle>{t('firstLesson.19')}</MainTitle>
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/7.png' /></FadeFromSide>} right={<FadeFromSide> <img className='rounded-[8px]' src='/lessons/day-1/session-1/8.png' /></FadeFromSide>} />
@@ -78,12 +83,15 @@ export const Session1 = () => {
         <Flex left={<FadeFromSide left ><img className='rounded-[8px]' src='/lessons/day-1/session-1/11.png' /></FadeFromSide>} right={<FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/12.png' /></FadeFromSide>} />
         <Flex left={<FadeFromSide left ><img className='rounded-[8px]' src='/lessons/day-1/session-1/13.png' /></FadeFromSide>} right={<FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/14.png' /></FadeFromSide>} />
         <MainTitle>{t('firstLesson.21')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/4.wav' controls />
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/15.png' /></FadeFromSide>} right={<div className='space-y-2'><FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/16.png' /></FadeFromSide><FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/17.png' /></FadeFromSide></div>} />
         <Paragraph>{t('firstLesson.22')}</Paragraph>
         <Paragraph>{t('firstLesson.23')}</Paragraph>
         <MainTitle>{t('firstLesson.24')}</MainTitle>
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/18.png' /></FadeFromSide>} right={<FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/19.png' /></FadeFromSide>} />
         <MainTitle>{t('firstLesson.25')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/5.wav' controls />
+
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/20.png' /></FadeFromSide>} right={<div><Paragraph className='mb-0'>{t('firstLesson.26')}</Paragraph>
           <ul>
             <li>- {t('firstLesson.27')}</li>
@@ -92,6 +100,8 @@ export const Session1 = () => {
           </ul>
         </div>} />
         <MainTitle>{t('firstLesson.30')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/6.wav' controls />
+
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/21.png' /></FadeFromSide>} right={<div>
           <Paragraph dangerouslySetInnerHTML={{ __html: t('firstLesson.31') }} />
           <Paragraph dangerouslySetInnerHTML={{ __html: t('firstLesson.32') }} />
@@ -100,6 +110,7 @@ export const Session1 = () => {
         <MainTitle>{t('firstLesson.34')}</MainTitle>
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/22.png' /></FadeFromSide>} right={<FadeFromSide><img className='rounded-[8px]' src='/lessons/day-1/session-1/23.png' /></FadeFromSide>} />
         <MainTitle>{t('firstLesson.35')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/7.wav' controls />
         <Paragraph>{t('firstLesson.36')}</Paragraph>
         <Paragraph>{t('firstLesson.37')}</Paragraph>
         <ul>
@@ -107,12 +118,14 @@ export const Session1 = () => {
           <li>- {t('firstLesson.39')}</li>
         </ul>
         <MainTitle>{t('firstLesson.40')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/8.wav' controls />
         <Paragraph>{t('firstLesson.41')}</Paragraph>
         <ul>
           <li>- {t('firstLesson.42')}</li>
           <li>- {t('firstLesson.43')}</li>
         </ul>
         <MainTitle>{t('firstLesson.44')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/9.wav' controls />
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/24.png' /></FadeFromSide>} right={
           <ul>
             <li>- {t('firstLesson.45')}</li>
@@ -123,8 +136,10 @@ export const Session1 = () => {
           </ul>
         } />
         <MainTitle>{t('firstLesson.50')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/10.wav' controls />
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/23.png' /></FadeFromSide>} right={<Paragraph>{t('firstLesson.51')}</Paragraph>} />
         <MainTitle>{t('firstLesson.52')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/11.wav' controls />
         <Paragraph>{t('firstLesson.53')}</Paragraph>
         <ul>
           <li>- {t('firstLesson.54')}</li>
@@ -135,6 +150,7 @@ export const Session1 = () => {
           <li>- {t('firstLesson.59')}</li>
         </ul>
         <MainTitle>{t('firstLesson.60')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/12.wav' controls />
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/26.png' /></FadeFromSide>} right={
           <ul>
             <li>- {t('firstLesson.61')}</li>
@@ -142,6 +158,7 @@ export const Session1 = () => {
           </ul>
         } />
         <MainTitle>{t('firstLesson.63')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/13.wav' controls />
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/27.png' /></FadeFromSide>} right={
           <ul>
             <li>- {t('firstLesson.64')}</li>
@@ -152,6 +169,7 @@ export const Session1 = () => {
         <Paragraph dangerouslySetInnerHTML={{ __html: t('firstLesson.67') }} />
         <Paragraph dangerouslySetInnerHTML={{ __html: t('firstLesson.68') }} /> */}
         <MainTitle>{t('firstLesson.69')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/14.wav' controls />
         <Flex left={<FadeFromSide left><img className='rounded-[8px]' src='/lessons/day-1/session-1/28.png' /> </FadeFromSide>} right={
           <div>
             <Paragraph>{t('firstLesson.70')}</Paragraph>
@@ -159,6 +177,7 @@ export const Session1 = () => {
           </div>
         } />
         <MainTitle>{t('firstLesson.72')}</MainTitle>
+        <audio src='/sounds/en/lesson-1/15.wav' controls />
         <Paragraph>{t('firstLesson.73')}</Paragraph>
         <Paragraph>{t('firstLesson.74')}</Paragraph>
         <Paragraph>{t('firstLesson.75')}</Paragraph>

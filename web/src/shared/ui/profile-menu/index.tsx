@@ -37,7 +37,7 @@ export const ProfileMenu = () => {
                     'translate-y-[20px] visible opacity-100': showMenu,
                     'invisible opacity-0': !showMenu
                 })}>
-                    <h4 className='mb-8'>{user.fullname}</h4>
+                    <h4 className='mb-8'>{user?.fullname}</h4>
                     <ul className='cursor-default space-y-4'>
                         <li className='flex items-center gap-x-2'>
                             <Icon type={'mail'} />

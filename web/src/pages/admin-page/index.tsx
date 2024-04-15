@@ -23,8 +23,6 @@ export const AdminPage = () => {
     React.useEffect(() => {
         getUserData()
     }, [])
-    console.log(users);
-
 
     return (
         <div className=''>
