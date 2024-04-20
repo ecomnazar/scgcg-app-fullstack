@@ -36,6 +36,8 @@
         "lesson": "Lesson",
         "test": "Test",
         "profile": "Profile",
+        "correctAnswers": "Your answer is correct",
+        "wrongAnswer": "Wrong answer",
         "mainPage": {
             "headerTitle": "The Specialized Course On Gender-Centreda Governance For Civil Servants",
             "headerDesc": "The attitude and behavior of state employees should be guided by respect for human rights and the need to safeguard the dignity and rights of citizens.",

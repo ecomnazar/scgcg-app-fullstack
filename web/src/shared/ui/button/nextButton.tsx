@@ -15,13 +15,13 @@ export const NextButton = () => {
 
     const handleNext = () => {
         // it is for first navigation
-        if (activeCourse[0] === 0) {
-            setActiveCourse([1, 0])
-            if (activeCourseLS[0] === 0) {
-                setActiveCourseLS(JSON.stringify([1, 0])) // set to localstorage first navigation
-            }
-            return
-        }
+        // if (activeCourse[0] === 0) {
+        //     setActiveCourse([1, 0])
+        //     if (activeCourseLS[0] === 0) {
+        //         setActiveCourseLS(JSON.stringify([1, 0])) // set to localstorage first navigation
+        //     }
+        //     return
+        // }
 
         // it is for last navigation
         if (activeCourse[0] + 1 === courses.length && activeCourse[1] === 1) {

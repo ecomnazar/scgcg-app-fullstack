@@ -25,7 +25,8 @@ export const CourseTitle: React.FC<Props> = ({ item, index }) => {
 
   return <div className='cursor-default px-4 border-b border-t bg-[#f7f9fa]'>
     <div onClick={() => setIsOpen((prev) => !prev)} className='py-3 cursor-pointer flex items-center justify-between space-x-6'>
-      <h3>{index === 0 ? t('introduction.introduction') : `${t('lesson')} ${index}`}</h3>
+      {/* <h3>{index === 0 ? t('introduction.introduction') : `${t('lesson')} ${index}`}</h3> */}
+      <h3>{t(`viewCourse.text${index + 2}`)}</h3>
       <button><IoIosArrowForward size={20} /></button>
     </div>
     <div>

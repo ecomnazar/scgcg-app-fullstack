@@ -11,9 +11,9 @@ export const Session4 = () => {
 
     return (
         <>
-            <MainTitle>4</MainTitle>
             <FlexWrapper>
                 <MainTitle>International obligations</MainTitle>
+                <audio src='/sounds/en/lesson-4/1.wav' controls />
                 <Paragraph>Turkmenistan is a member of the UN Commission on the Status of Women for 2018-2022</Paragraph>
                 <Paragraph>Turkmenistan is a signatory to the following international treaties and conventions on human rights and freedoms:</Paragraph>
                 <Paragraph>1. The Universal Declaration of Human Rights;</Paragraph>
@@ -27,6 +27,7 @@ export const Session4 = () => {
                 <Paragraph>9. The Convention on the Rights of Persons with Disabilities. </Paragraph>
 
                 <MainTitle>Implementation of Bejing Declaration and Platform for Action</MainTitle>
+                <audio src='/sounds/en/lesson-4/2.wav' controls />
                 <Paragraph>The implementation of the country's international obligations in achieving gender equality is coordinated by the Interdepartmental Commission for Ensuring the Implementation of Turkmenistan's International Obligations in the Field of Human Rights and International Humanitarian Law</Paragraph>
                 <Paragraph>1. The first National Action Plan for Gender Equality in Turkmenistan for 2015-2020 promoted positive reforms in the national gender policy, including the nationalization of the Sustainable Development Goals</Paragraph>
                 <Paragraph>2. The first NAP includes the elimination of discrimination on the basis of sex and the empowerment of women and girls.</Paragraph>
@@ -34,17 +35,21 @@ export const Session4 = () => {
                 <Paragraph>4. Noteworthy areas of progress in Turkmenistan include achieving gender equality in admission to educational institutions, reducing maternal mortality, providing conditions for paid maternity leave, unpaid parental leave, and increasing the representation of women in elected government bodies.</Paragraph>
 
                 <MainTitle>UNDP support the government of Turkmenistan in promoting gender equality and gender mainstreaming in governance</MainTitle>
+                <audio src='/sounds/en/lesson-4/3.wav' controls />
                 <Flex left={<FadeFromSide left><Image source={source + '1.png'} /></FadeFromSide>} right={<FadeFromSide><Image source={source + '2.png'} /></FadeFromSide>} />
 
                 <MainTitle>UNDP support the government of Turkmenistan in promoting zero tolerance policy and supports promoting measures against GBV and Sexual Harassment</MainTitle>
+                <audio src='/sounds/en/lesson-4/4.wav' controls />
                 <FadeFromSide left><Image source={source + '3.png'} /></FadeFromSide>
 
                 <MainTitle>National Framework Constitution</MainTitle>
+                <audio src='/sounds/en/lesson-4/5.wav' controls />
                 <Paragraph>The Constitution of Turkmenistan, incorporating fundamental provisions of international human rights conventions and declarations, including those related to women, secures a number of additional rights aimed at supporting and advancing women rights</Paragraph>
                 <Paragraph>1. The Constitution of Turkmenistan guarantees gender equality in all aspects of state and social life. </Paragraph>
                 <Paragraph>2. According to the Article 29 of the Basic Law, men and women in Turkmenistan enjoy equal rights and freedoms, as well as equal opportunities to exercise them. The violation of equality on the grounds of sex is punishable by law.</Paragraph>
 
                 <MainTitle>The Law of Turkmenistan</MainTitle>
+                <audio src='/sounds/en/lesson-4/6.wav' controls />
                 <Paragraph>“On state guarantees of ensuring equal rights and equal opportunities for women and men” (18 August 2015 )</Paragraph>
                 <Paragraph>Article 6 prohibits discrimination on the basis of sex</Paragraph>
                 <Paragraph>It also points out that it does not discriminate on the basis of sex:</Paragraph>
@@ -56,6 +61,7 @@ export const Session4 = () => {
                 <Paragraph>6. features of the protection of women’s rights in criminal proceedings in accordance with the legislation of Turkmenistan.</Paragraph>
 
                 <MainTitle>The Law of Turkmenistan</MainTitle>
+                <audio src='/sounds/en/lesson-4/7.wav' controls />
                 <Paragraph>“On state guarantees of ensuring equal rights and equal opportunities for women and men”</Paragraph>
                 <Paragraph>In accordance with Articles 16, 17 of the Law, the state guarantees women and men:</Paragraph>
                 <Paragraph>Equal right to participate in the management of the affairs of society and the state directly or through their elected representatives in accordance with the law;</Paragraph>
@@ -66,6 +72,7 @@ export const Session4 = () => {
                 <Paragraph>providing equal opportunities to participate in the electoral process in accordance with the legislation of Turkmenistan.</Paragraph>
 
                 <MainTitle>Labor Code of Turkmenistan</MainTitle>
+                <audio src='/sounds/en/lesson-4/8.wav' controls />
                 <Paragraph>1. equal treatment and equal opportunities for women and men in the process of hiring, promotion, advanced training, retraining, assessment of the quality of work and release from work;</Paragraph>
                 <Paragraph>2. creating equal working conditions for employees occupying the same positions regardless of gender,</Paragraph>
                 <Paragraph>3. taking measures to prevent gender discrimination and sexual harassment;</Paragraph>
@@ -77,6 +84,7 @@ export const Session4 = () => {
 
 
                 <MainTitle>Laws</MainTitle>
+                <audio src='/sounds/en/lesson-4/9.wav' controls />
                 <Paragraph>1. "On employment"</Paragraph>
                 <Paragraph>2. "About enterprises"</Paragraph>
                 <Paragraph>3. “On conscription and military service”</Paragraph>
@@ -86,6 +94,7 @@ export const Session4 = () => {
                 <Paragraph>7. "About the Ombudsman"</Paragraph>
 
                 <MainTitle>The National Action Plan for Gender Equality in Turkmenistan for 2021-2025</MainTitle>
+                <audio src='/sounds/en/lesson-4/10.wav' controls />
                 <Paragraph>7 strategic directions:</Paragraph>
                 <Paragraph>1. Strengthening and improving the legal framework in order to achieve gender equality;</Paragraph>
                 <Paragraph>2. Provision of gender-responsive health care;</Paragraph>

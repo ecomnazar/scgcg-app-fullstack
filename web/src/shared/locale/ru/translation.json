@@ -36,6 +36,8 @@
         "lesson": "Урок",
         "test": "Тест",
         "profile": "Профиль",
+        "correctAnswers": "Ваш ответ правильный",
+        "wrongAnswer": "Неправильный ответ",
         "introduction": {
             "introduction": "Введение",
             "UNDP": "ПРООН Туркменистан",

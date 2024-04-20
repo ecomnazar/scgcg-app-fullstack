@@ -11,15 +11,18 @@ export const Session3 = () => {
     return (
         <>
             <MainTitle>STRATEGIES TO ACHIEVE GENDER EQUALITY</MainTitle>
+            <audio src='/sounds/en/lesson-3/1.wav' controls />
             <FlexWrapper>
                 <FadeFromSide><Image source={source + '1.png'} /> </FadeFromSide>
                 <MainTitle>Equality in law</MainTitle>
+                <audio src='/sounds/en/lesson-3/2.wav' controls />
                 <Paragraph>The oldest strategy, The longest fight Did not meet expetations Condicio sine qua non Necessary and important , but not sufficient</Paragraph>
                 <Paragraph>1. Constitution</Paragraph>
                 <Paragraph>2. Law on Gender Equality</Paragraph>
                 <Paragraph>3. National Strategy for Gender Equality</Paragraph>
                 <Paragraph>4. Various laws and policies with an integratet gender perspecitve</Paragraph>
                 <MainTitle>Equal opportunities</MainTitle>
+                <audio src='/sounds/en/lesson-3/3.wav' controls />
                 <Flex left={<div>
                     <Paragraph>1. Response to unequal starting positions in society</Paragraph>
                     <Paragraph>2. They can be incorporated into laws</Paragraph>
@@ -27,6 +30,7 @@ export const Session3 = () => {
                     <Paragraph>4. Social justice matter</Paragraph>
                 </div>} right={<FadeFromSide><Image source={source + '2.png'} /></FadeFromSide>} />
                 <MainTitle>Gender mainstreaming</MainTitle>
+                <audio src='/sounds/en/lesson-3/4.wav' controls />
                 <Paragraph>„In addressing unequal access to
                     and inadequate educational
                     opportunities,
@@ -46,6 +50,7 @@ export const Session3 = () => {
                 <Paragraph>Established as the main global strategy for promoting gender equality in the Beijing Platform for Action at the IV World Conference on Women (Beijing, 1995)</Paragraph>
 
                 <MainTitle>Gender Mainstreaming</MainTitle>
+                <audio src='/sounds/en/lesson-3/5.wav' controls />
 
                 <Paragraph>One of the strategies to
                     support the goal of
@@ -70,9 +75,11 @@ export const Session3 = () => {
 
 
                 <MainTitle>TWIN TRACK APPROACH</MainTitle>
+                <audio src='/sounds/en/lesson-3/6.wav' controls />
                 <FadeFromSide><Image source={source + '3.png'} /></FadeFromSide>
 
                 <MainTitle>Why is it so important ?</MainTitle>
+                <audio src='/sounds/en/lesson-3/7.wav' controls />
 
                 <Paragraph>1. Promotes social justice.</Paragraph>
                 <Paragraph>2. Takes into account the diversity and different forms of mulitple discrimination</Paragraph>
@@ -83,9 +90,12 @@ export const Session3 = () => {
                 <Paragraph>7. Makes gender equality visible in the mainstream of society: gender equality is an essential development issue with implications and not a “luxury”.</Paragraph>
 
                 <MainTitle>GENDER EQUITY</MainTitle>
+                <audio src='/sounds/en/lesson-3/8.wav' controls />
                 <FadeFromSide left><Image source={source + '4.png'} /></FadeFromSide>
 
                 <MainTitle>What is required for successful gender mainstreaming ?</MainTitle>
+                <audio src='/sounds/en/lesson-3/9.wav' controls />
+
                 <Flex left={<FadeFromSide left><Image source={source + '5.png'} /></FadeFromSide>} right={<div>
                     <Paragraph>1. Gender disaggregated statistics; data on the position of women and men.</Paragraph>
                     <Paragraph>2. Full gender analysis.</Paragraph>
@@ -96,6 +106,7 @@ export const Session3 = () => {
                 </div>} />
 
                 <MainTitle>Gender transformative approaches</MainTitle>
+                <audio src='/sounds/en/lesson-3/10.wav' controls />
                 <Paragraph>1. Human rights based approach</Paragraph>
                 <Paragraph>2. Power (take in consideration)</Paragraph>
                 <Paragraph>3. Norms and values in sociaty (cose of discrimination)</Paragraph>

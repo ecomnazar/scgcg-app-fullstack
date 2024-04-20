@@ -7,36 +7,58 @@ import { BaseContext } from '@/app/providers/useContextProvider';
 import 'swiper/css';
 import { Button } from '../button';
 import { FadeIn } from '../animation/fadeIn';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     questions: {
         trueAnswer: number;
         question: string;
+        successMessage: string;
         answers: string[];
+        multiple?: boolean;
     }[]
+    isLast?: boolean
 }
 
-export const TestForm: React.FC<Props> = ({ questions }) => {
+export const TestForm: React.FC<Props> = ({ questions, isLast = false }) => {
     const { activeCourse, setActiveCourse } = useContext(BaseContext)
     const swiperRef = React.useRef<SwiperRef>(null)
-    const [activeIndex, setActiveIndex] = React.useState(0)
-    const [answerIndex, setAnswerIndex] = React.useState(0)
+    const [activeIndex, setActiveIndex] = React.useState(0) // to show in which question we are
+    const [answerIndex, setAnswerIndex] = React.useState([0]) // clicked answer index in each form
+    const [showSubmit, setShowSubmit] = React.useState(true) // to show submit button or next button
+    const navigate = useNavigate()
+    const { t } = useTranslation()
 
-    const handleClick = (trueAnswerIndex: number) => {
-        if (answerIndex === trueAnswerIndex) {
-            setAnswerIndex(0)
-            toast.success('True')
-            if (activeIndex === questions.length - 1) {
-                setActiveCourseLS(JSON.stringify([activeCourse[0] + 1, 0]))
-                setActiveCourse([activeCourse[0] + 1, 0])
-                return
+    const handleSubmit = (trueAnswerIndex: number, multiple: boolean | undefined) => {
+        if (multiple) {
+            setShowSubmit(false)
+        } else {
+
+            if (answerIndex[0] === trueAnswerIndex) {
+                setShowSubmit(false)
+                // toast.success('Correct Answer')
+            } else {
+                toast.error(t('wrongAnswer'))
             }
-            swiperRef.current?.swiper.slideNext()
-            return
         }
-        toast.error('Not true')
+
     }
 
+    const handleNext = () => {
+        if (activeIndex === questions.length - 1) {
+            if (isLast) {
+                navigate('/certificate')
+                return
+            }
+            setActiveCourseLS(JSON.stringify([activeCourse[0] + 1, 0]))
+            setActiveCourse([activeCourse[0] + 1, 0])
+            return
+        }
+        swiperRef.current?.swiper.slideNext()
+        setAnswerIndex([0])
+        setShowSubmit(true)
+    }
 
     return (
         <FadeIn>
@@ -55,22 +77,34 @@ export const TestForm: React.FC<Props> = ({ questions }) => {
                         return (
                             <SwiperSlide key={idx}>
                                 <div className=''>
-                                    <h2 className='mb-4'>{item.question}</h2>
+                                    <h2 className='text-[21px] mb-4'>{item.question}</h2>
                                     <div className='space-y-4 mb-4'>
                                         {item.answers.map((answer, idx2) => {
                                             return (<div onClick={() => {
-                                                setAnswerIndex(idx2)
+                                                if (item.multiple) {
+                                                    const hasEqual = answerIndex.some((ai) => ai === idx2)
+                                                    if (hasEqual) {
+                                                        setAnswerIndex((prev) => prev.filter((pr) => pr !== idx2))
+                                                    } else {
+                                                        setAnswerIndex((prev) => [...prev, idx2])
+                                                    }
+                                                } else {
+                                                    setAnswerIndex([idx2])
+                                                }
                                             }} key={idx2} className="relative border-primary border rounded-md p-3 w-full pr-12">
                                                 {answer}
                                                 <div className="absolute top-1/2 -translate-y-1/2 right-[10px] p-[5px] border border-primary rounded-md w-[20px] h-[20px]">
                                                     <div className={clsx(" rounded-full w-full h-full", {
-                                                        ['bg-primary/50']: idx2 === answerIndex
+                                                        ['bg-primary/50']: answerIndex.some((answr) => answr === idx2)
                                                     })}></div>
                                                 </div>
                                             </div>)
                                         })}
                                     </div>
-                                    <Button onClick={() => handleClick(item.trueAnswer)} title={'Submit'} />
+                                    {!showSubmit && <p className='mb-4'>{item.successMessage === 'true' ? `${t('correctAnswers')} 🎉` : item.successMessage}</p>}
+                                    {showSubmit ?
+                                        <Button onClick={() => handleSubmit(item.trueAnswer, item.multiple)} title={'Submit'} />
+                                        : <Button onClick={handleNext} title={'Next'} />}
                                 </div>
                             </SwiperSlide>
                         )

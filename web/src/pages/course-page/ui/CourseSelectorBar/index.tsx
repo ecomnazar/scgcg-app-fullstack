@@ -21,10 +21,10 @@ export const CourseSelectorBar = () => {
 
 
 const courses = [
-    {
-        courseTitle: 'introduction',
-        subCourses: ['viewCourse.text1']
-    },
+    // {
+    //     courseTitle: 'introduction',
+    //     subCourses: ['viewCourse.text1']
+    // },
     {
         courseTitle: 'LESSON 1',
         subCourses: ['viewCourse.text2', 'test']

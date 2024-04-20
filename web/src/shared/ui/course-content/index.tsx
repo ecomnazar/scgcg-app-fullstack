@@ -1,4 +1,3 @@
-import { Introduction } from "./introduction";
 import { Session1 } from "./lesson-1/Session-1";
 import { Session1Test } from "./lesson-1/Session-1-Test";
 import { Session2 } from "./lesson-2/Session-2";
@@ -13,7 +12,7 @@ import { Session6 } from "./lesson-6/Session-6";
 import { Session6Test } from "./lesson-6/Session-6-Test";
 
 export const courses = [
-    [<Introduction />],
+    // [<Introduction />],
     [<Session1 />, <Session1Test />],
     [<Session2 />, <Session2Test />],
     [<Session3 />, <Session3Test />],

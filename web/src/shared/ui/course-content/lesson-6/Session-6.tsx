@@ -11,18 +11,20 @@ export const Session6 = () => {
 
   return (
     <>
-      <MainTitle>6</MainTitle>
       <FlexWrapper>
         <MainTitle>Tools for Gender Mainstreaming</MainTitle>
+        <audio src='/sounds/en/lesson-6/1.wav' controls />
         <FadeFromSide left><Image source={source + '1.png'} /></FadeFromSide>
 
         <MainTitle>Gender Analysis</MainTitle>
+        <audio src='/sounds/en/lesson-6/2.wav' controls />
         <Paragraph>A gender analysis is a systematic process that identifies, understands, and describes gender differences and the relevance of gender roles and power dynamics in a particular context. It is based on sex-disaggregated data and gender information.</Paragraph>
         <Paragraph>1. To estimame an activity considering the different needs of women and man;</Paragraph>
         <Paragraph>2. To have data classified by gender (participant, user, etc.).</Paragraph>
         <Paragraph>3. The multitude of methods by which we understand the relationships between women and men, their access to resources, their activities, and the constraints they face</Paragraph>
 
         <MainTitle>LEVEL OF GENDER ANALYSIS</MainTitle>
+        <audio src='/sounds/en/lesson-6/3.wav' controls />
         <Flex left={<div>
           <Paragraph>The national level: <br />National strategies and actionplans, public expenditure programmes/budgets, legislation, regulations and procedures, operational guidelines</Paragraph>
           <Paragraph>The sub-national level: <br />Provincial or district development plans, policies, strategies, budgets, legislations, regulations and procedures</Paragraph>
@@ -32,6 +34,7 @@ export const Session6 = () => {
         </div>} />
 
         <MainTitle>STEPS IN GENDER ANALYSIS</MainTitle>
+        <audio src='/sounds/en/lesson-6/4.wav' controls />
         <FadeFromSide left><Image source={source + '2.png'} /></FadeFromSide>
         <Paragraph>1. Who uses health services more: women or men?</Paragraph>
         <Paragraph>2. Do men and women have the same income to pay for these services ?</Paragraph>
@@ -47,6 +50,7 @@ export const Session6 = () => {
         <Paragraph>5. Difficulty in the rehabilitation period</Paragraph>
 
         <MainTitle>DATA COLLECTION</MainTitle>
+        <audio src='/sounds/en/lesson-6/5.wav' controls />
         <Paragraph>1. Collect gender data relevant to the program/project (e.g. data from national agencies/ministries, national and international reports, reports from women’s organisations, and shadow CEDAW reports).</Paragraph>
         <Paragraph>2. Collect sex-disaggregated household, workplace, and community data (national statistical office)</Paragraph>
         <Paragraph>3. Understand the different needs, priorities, and strengths (strategic and practical needs) of different women, different men</Paragraph>
@@ -57,12 +61,15 @@ export const Session6 = () => {
         <Paragraph>8. Ensure Do No Harm.</Paragraph>
 
         <MainTitle>Gender based violence,</MainTitle>
+        <audio src='/sounds/en/lesson-6/6.wav' controls />
         <FadeFromSide><Image source={source + '3.png'} /></FadeFromSide>
 
         <MainTitle>Gender based violence, data</MainTitle>
+        <audio src='/sounds/en/lesson-6/7.wav' controls />
         <Flex left={<FadeFromSide left><Image source={source + '4.png'} /></FadeFromSide>} right={<FadeFromSide><Image source={source + '5.png'} /></FadeFromSide>} />
 
         <MainTitle>How to analyse</MainTitle>
+        <audio src='/sounds/en/lesson-6/8.wav' controls />
         <Flex left={<FadeFromSide left><Image source={source + '6.png'} /> </FadeFromSide>} right={<div>
           <Paragraph>1. Young women are more dissatisfied with measures to support the family than young men.</Paragraph>
           <Paragraph>2. Men find that the state helps young married couples start a family on level 2.55 (out of 5) compared to young women (2.35).</Paragraph>
@@ -72,10 +79,12 @@ export const Session6 = () => {
         </div>} />
 
         <MainTitle>Gender analysis – agriculture</MainTitle>
+        <audio src='/sounds/en/lesson-6/9.wav' controls />
         <FadeFromSide left><Image source={source + '7.png'} /></FadeFromSide>
         <FadeFromSide><Image source={source + '8.png'} /></FadeFromSide>
 
         <MainTitle>Gender analysis frameworks</MainTitle>
+        <audio src='/sounds/en/lesson-6/10.wav' controls />
 
         <Paragraph>1. Harvard Analitical Framework (aktivites, resources, norms)</Paragraph>
         <Paragraph>2. Moser framework – Assesment of gender needs (strategic and practical needs )</Paragraph>
@@ -98,6 +107,7 @@ export const Session6 = () => {
         <Paragraph>19. Analysis of working tools and resources</Paragraph>
 
         <MainTitle>Gender mainstreaming in parking services</MainTitle>
+        <audio src='/sounds/en/lesson-6/11.wav' controls />
         <FadeFromSide left><Image source={source + '9.png'} /></FadeFromSide>
 
         <Paragraph>1. Who participates in defining public policies</Paragraph>
@@ -109,6 +119,7 @@ export const Session6 = () => {
         <Paragraph>7. What has changed in the long run</Paragraph>
 
         <MainTitle>GENDER RELEVANCE</MainTitle>
+        <audio src='/sounds/en/lesson-6/12.wav' controls />
         <Paragraph>1. The relevance discussion aims to identify the key entry points for the gender equality analysis.</Paragraph>
         <Paragraph>2. It is relevant to ask questions beyond the narrow policy area and identify macro-level links with other policy areas and global agendas.</Paragraph>
         <Paragraph>3. What are the relevant aspects in the country for gender equality in your sector?</Paragraph>

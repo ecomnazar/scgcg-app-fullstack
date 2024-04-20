@@ -11,6 +11,7 @@ export const Session5 = () => {
   return (
     <>
       <MainTitle>Gender data</MainTitle>
+      <audio src='/sounds/en/lesson-5/1.wav' controls />
       <FlexWrapper>
         <Paragraph>Generally, data is disaggregated by sex</Paragraph>
         <Paragraph>Sex-disaggregated statistics are part of gender statistics, but gender statistics are much broader</Paragraph>
@@ -19,12 +20,14 @@ export const Session5 = () => {
 
 
         <MainTitle>Sex or gender ?</MainTitle>
+        <audio src='/sounds/en/lesson-5/2.wav' controls />
         <Paragraph>1. After delivery the doctor will reveal to the mother the ____ of the child</Paragraph>
         <Paragraph>2. In order to understand the differences in enrolment rates between girls and boys, the data must be disaggregated by ____</Paragraph>
         <Paragraph>3. Women and men’s ______ roles in society determine how much time they spend doing domestic work</Paragraph>
         <Paragraph>4. ______ statistics include _____ disaggregated statistics and other ______ specific indicators that capture the realities and the differences in the lives of women and men</Paragraph>
 
         <MainTitle>Gender statistics</MainTitle>
+        <audio src='/sounds/en/lesson-5/3.wav' controls />
         <Paragraph>Gender Statistics capture the specific realities in the lives of women and men Gender statistics go well beyond sex-disaggregation</Paragraph>
         <Paragraph>Gender statistics comprise:</Paragraph>
         <Paragraph>1. Sex-disaggregated data</Paragraph>
@@ -33,6 +36,7 @@ export const Session5 = () => {
         <Paragraph>Gender data cuts across all areas of sustainable development</Paragraph>
 
         <MainTitle>Are these gender statistics ?</MainTitle>
+        <audio src='/sounds/en/lesson-5/4.wav' controls />
         <Paragraph>Proportion of population living in slums, by sex</Paragraph>
         <Paragraph>Maternal mortality ratios, per 100,000 live births</Paragraph>
         <Paragraph>Incidence of prostate cancer</Paragraph>
@@ -42,6 +46,7 @@ export const Session5 = () => {
 
 
         <MainTitle>Gender data Vs Gender statistics </MainTitle>
+        <audio src='/sounds/en/lesson-5/5.wav' controls />
         <Flex left={<FadeFromSide left><Image source={source + '1.png'} /></FadeFromSide>} right={<div>
           <Paragraph>Gender data are data points for men, women or for issues that affect women or men particularly.</Paragraph>
           <Paragraph>Gender statistics are the estimates calculated utilizing gender data.</Paragraph>
@@ -49,6 +54,7 @@ export const Session5 = () => {
         </div>} />
 
         <MainTitle>The 2030 Agenda for Sustainable Development</MainTitle>
+        <audio src='/sounds/en/lesson-5/6.wav' controls />
         <Flex left={<FadeFromSide left><Image source={source + '2.png'} /></FadeFromSide>} right={<div>
           <Paragraph>Adopted by all UN Member States in 2015</Paragraph>
           <Paragraph>Provides a shared blueprint for peace & prosperity for people and the planet.</Paragraph>
@@ -59,6 +65,7 @@ export const Session5 = () => {
         </div>} />
 
         <MainTitle>Gender statitistcs and SDGs</MainTitle>
+        <audio src='/sounds/en/lesson-5/7.wav' controls />
         <Flex left={<div>
           <Paragraph>Gender indicators are present across many SDG goals. Well beyond goal 5.</Paragraph>
           <Paragraph>Without gender equality the SDGs cannot be achieved</Paragraph>
